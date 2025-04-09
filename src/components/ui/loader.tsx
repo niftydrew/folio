@@ -16,8 +16,8 @@ export function Loader({ size = 'md', className }: LoaderProps) {
 
   const sizeMap = {
     sm: 'space-x-1',
-    md: 'space-x-2',
-    lg: 'space-x-3',
+    md: 'space-x-1.5',
+    lg: 'space-x-2',
   };
 
   const dotSizeMap = {
