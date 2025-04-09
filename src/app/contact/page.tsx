@@ -8,9 +8,17 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Contact | John Doe",
+  title: "Contact | Andrew Akyampong",
   description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+    "Get in touch with Andrew Akyampong, Designer & Developer with expertise in creating elegant, user-focused web solutions.",
+  openGraph: {
+    title: "Contact | Andrew Akyampong",
+    description: "Get in touch with Andrew Akyampong, Designer & Developer with expertise in web development and design.",
+  },
+  twitter: {
+    title: "Contact | Andrew Akyampong",
+    description: "Get in touch with Andrew Akyampong, Designer & Developer with expertise in web development and design.",
+  },
 };
 
 export default function Projects() {

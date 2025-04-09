@@ -24,9 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   } else {
     return {
-      title: "Projects | John Doe",
+      title: "Projects | 0xDrew",
       description:
-        "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+        "Explore projects by 0xDrew, a Designer & Developer with 6+ years experience creating elegant, user-focused web solutions using React, Next.js, TypeScript and more.",
     };
   }
 }

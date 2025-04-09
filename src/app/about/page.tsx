@@ -10,9 +10,17 @@ import { motion } from "framer-motion";
 import About from "@/components/About";
 
 export const metadata: Metadata = {
-  title: "About | John Doe",
+  title: "About | Andrew Akyampong",
   description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+    "Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience creating elegant, user-focused web solutions.",
+  openGraph: {
+    title: "About | Andrew Akyampong",
+    description: "Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience.",
+  },
+  twitter: {
+    title: "About | Andrew Akyampong",
+    description: "Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience.",
+  },
 };
 
 export default function AboutPage() {

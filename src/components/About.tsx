@@ -71,47 +71,26 @@ export default function About() {
 
       <div className="max-w-4xl">
         <Paragraph className=" mt-4">
-          Hey there, I&apos;m John Doe - a passionate developer, avid writer,
-          and a connoisseur of awesome design. Welcome to my corner of the
-          digital world!
+          Hey there, I&apos;m 0xDrew - a designer and developer with over 6 years of experience crafting elegant, user-focused web solutions. Welcome to my portfolio!
         </Paragraph>
         <Paragraph className=" mt-4">
-          Since the early days of my journey, I&apos;ve been captivated by the
-          art of crafting exceptional digital experiences. As a developer, I
-          thrive on turning lines of code into functional and elegant solutions.
-          My goal is to not just create software, but to build digital marvels
-          that seamlessly merge form and function.
+          My journey in tech began with a passion for solving complex problems through code. As I&apos;ve grown, I&apos;ve developed a deep appreciation for the intersection of development and design. I believe that truly exceptional digital experiences require both technical excellence and thoughtful design thinking.
         </Paragraph>
 
         <Paragraph className=" mt-4">
-          But my journey doesn&apos;t stop at coding. With a heart full of words
-          and a mind brimming with ideas, I&apos;ve ventured into the realm of
-          writing. From tech articles that unravel complex concepts to creative
-          tales that ignite the imagination, I weave words to inform, entertain,
-          and inspire.
+          What drives me is transforming complex challenges into intuitive, accessible solutions. Whether I&apos;m working with React, Next.js, TypeScript, or exploring new technologies, I approach each project with a keen eye for both functionality and user experience.
         </Paragraph>
         <Paragraph className=" mt-4">
-          What sets me apart is my unwavering appreciation for design. I believe
-          that aesthetics and usability go hand in hand. My eye for awesome
-          design ensures that every project I undertake not only works
-          flawlessly under the hood but also looks stunning on the surface.
+          My approach combines technical expertise with design sensibility. I focus on creating solutions that not only meet technical requirements but also delight users through thoughtful interaction design, clean aesthetics, and attention to detail.
         </Paragraph>
         <Paragraph className=" mt-4">
-          Through this website, I aim to share my insights, experiences, and
-          creations with you. Whether you&apos;re a fellow developer seeking
-          solutions, a fellow writer in search of inspiration, or simply someone
-          who appreciates the finer aspects of design, there&apos;s something
-          here for you.
+          In addition to client work, I enjoy contributing to open-source projects and staying active in developer communities. I believe in continuous learning and love exploring emerging technologies that push the boundaries of what&apos;s possible on the web.
         </Paragraph>
         <Paragraph className=" mt-4">
-          Join me on this journey of bytes and narratives, logic and creativity,
-          code and prose. Together, we can explore the boundless possibilities
-          of technology and storytelling, all while reveling in the sheer beauty
-          of thoughtful design.
+          This portfolio showcases selected projects that demonstrate my capabilities across both design and development. Each project represents a unique challenge and highlights different aspects of my skill set.
         </Paragraph>
         <Paragraph className=" mt-4">
-          Thank you for being here, and I can&apos;t wait to embark on this
-          adventure with you.
+          I&apos;m always open to discussing new opportunities, collaborations, or just connecting with like-minded professionals. Feel free to reach out through the contact page if you&apos;d like to work together or learn more about my approach.
         </Paragraph>
       </div>
     </div>

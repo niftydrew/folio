@@ -1,11 +1,18 @@
-## Sidefolio - Portfolio website template
+## 0xDrew's Portfolio
 
-As seen on [Aceternity UI](https://ui.aceternity.com/templtes/sidefolio)
+A personal portfolio site showcasing my design and development work.
 
 ## Built with
-- Next.js
-- Tailwindcss
-- Framer motion
+- Next.js 14
+- TailwindCSS
+- Framer Motion
+- TypeScript
 - MDX
+- next-themes (for dark/light mode)
 
-Checkout all the templates at [Aceternity UI](https://ui.aceternity.com/templates)
+## Features
+- Responsive design
+- Dark/light mode
+- Project showcase
+- Blog section
+- Contact form

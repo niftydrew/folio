@@ -14,9 +14,9 @@ export default function LogoCloud() {
             >
               <div className='flex'>
                 <img
-                  className='mx-auto h-5 w-fit dark:invert'
-                  src='https://html.tailus.io/blocks/customers/nvidia.svg'
-                  alt='Nvidia Logo'
+                  className='mx-auto h-6 w-fit dark:invert'
+                  src='/images/logos/web3accelerators.svg'
+                  alt='Web3 Accelerators Logo'
                   height='20'
                   width='auto'
                 />
@@ -24,27 +24,9 @@ export default function LogoCloud() {
 
               <div className='flex'>
                 <img
-                  className='mx-auto h-4 w-fit dark:invert'
-                  src='https://html.tailus.io/blocks/customers/column.svg'
-                  alt='Column Logo'
-                  height='16'
-                  width='auto'
-                />
-              </div>
-              <div className='flex'>
-                <img
-                  className='mx-auto h-4 w-fit dark:invert'
-                  src='https://html.tailus.io/blocks/customers/github.svg'
-                  alt='GitHub Logo'
-                  height='16'
-                  width='auto'
-                />
-              </div>
-              <div className='flex'>
-                <img
                   className='mx-auto h-5 w-fit dark:invert'
-                  src='https://html.tailus.io/blocks/customers/nike.svg'
-                  alt='Nike Logo'
+                  src='/images/logos/translucid.svg'
+                  alt='Translucid Logo'
                   height='20'
                   width='auto'
                 />
@@ -52,37 +34,54 @@ export default function LogoCloud() {
               <div className='flex'>
                 <img
                   className='mx-auto h-5 w-fit dark:invert'
-                  src='https://html.tailus.io/blocks/customers/lemonsqueezy.svg'
-                  alt='Lemon Squeezy Logo'
+                  src='/images/logos/scia.svg'
+                  alt='Scia Logo'
                   height='20'
                   width='auto'
                 />
               </div>
               <div className='flex'>
                 <img
-                  className='mx-auto h-4 w-fit dark:invert'
-                  src='https://html.tailus.io/blocks/customers/laravel.svg'
-                  alt='Laravel Logo'
-                  height='16'
+                  className='mx-auto h-5 w-fit dark:invert'
+                  src='/images/logos/substruct.svg'
+                  alt='Substruct Logo'
+                  height='20'
                   width='auto'
                 />
               </div>
               <div className='flex'>
                 <img
-                  className='mx-auto h-7 w-fit dark:invert'
-                  src='https://html.tailus.io/blocks/customers/lilly.svg'
-                  alt='Lilly Logo'
-                  height='28'
+                  className='mx-auto h-5 w-fit dark:invert'
+                  src='/images/logos/buidlme.svg'
+                  alt='Buidlme Logo'
+                  height='20'
                   width='auto'
                 />
               </div>
-
+              <div className='flex'>
+                <img
+                  className='mx-auto h-5 w-fit dark:invert'
+                  src='/images/logos/vested.svg'
+                  alt='Vested Logo'
+                  height='20'
+                  width='auto'
+                />
+              </div>
               <div className='flex'>
                 <img
                   className='mx-auto h-6 w-fit dark:invert'
-                  src='https://html.tailus.io/blocks/customers/openai.svg'
-                  alt='OpenAI Logo'
-                  height='24'
+                  src='/images/logos/vates.svg'
+                  alt='Vates Logo'
+                  height='20'
+                  width='auto'
+                />
+              </div>
+              <div className='flex'>
+                <img
+                  className='mx-auto h-6 w-fit dark:invert'
+                  src='/images/logos/divestify.svg'
+                  alt='Divestify Logo'
+                  height='20'
                   width='auto'
                 />
               </div>
