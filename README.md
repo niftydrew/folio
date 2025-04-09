@@ -1,8 +1,9 @@
-## 0xDrew's Portfolio
+# 0xDrew's Portfolio
 
 A personal portfolio site showcasing my design and development work.
 
 ## Built with
+
 - Next.js 14
 - TailwindCSS
 - Framer Motion
@@ -11,6 +12,7 @@ A personal portfolio site showcasing my design and development work.
 - next-themes (for dark/light mode)
 
 ## Features
+
 - Responsive design
 - Dark/light mode
 - Project showcase
