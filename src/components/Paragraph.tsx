@@ -20,7 +20,7 @@ export const Paragraph = ({
     <p
       className={twMerge(
         switzer.className,
-        "text-sm lg:text-base lg:leading-[160%] font-normal text-neutral-600",
+        "text-sm lg:text-base lg:leading-[160%] font-normal text-neutral-600 dark:text-neutral-300",
         className
       )}
     >

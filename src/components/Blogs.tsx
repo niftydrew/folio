@@ -50,7 +50,7 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
                     scaleX: 0.95,
                     scaleY: 0.95,
                   }}
-                  className="absolute z-0 pointer-events-none bg-gray-50 inset-0 h-full w-full   rounded-md "
+                  className="absolute z-0 pointer-events-none bg-gray-50 dark:bg-neutral-800/50 inset-0 h-full w-full rounded-md"
                 />
               )}
             </AnimatePresence>
@@ -74,7 +74,7 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
                   {blog.tags?.map((tag, index) => (
                     <span
                       key={`tag-${blog.slug}`}
-                      className="text-xs px-1 py-0.5 text-secondary border border-neutral-200 bg-white rounded-md"
+                      className="text-xs px-1 py-0.5 text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-md"
                     >
                       {tag}
                     </span>

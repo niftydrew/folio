@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import { twMerge } from "tailwind-merge";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const switzer = localFont({
   src: "../../fonts/Switzer-Variable.woff2",
@@ -23,21 +24,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={twMerge(
           switzer.className,
-          "flex antialiased h-screen overflow-hidden bg-gray-100"
+          "flex antialiased h-screen overflow-hidden"
         )}
       >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Sidebar />
-        <div className="lg:pl-2 lg:pt-2 bg-gray-100 flex-1 overflow-y-auto">
-          <div className="flex-1 bg-white min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 overflow-y-auto">
+        <div className="lg:pl-2 lg:pt-2 bg-gray-100 dark:bg-neutral-950 flex-1 overflow-y-auto">
+          <div className="flex-1 bg-white dark:bg-neutral-900 min-h-screen lg:rounded-tl-xl border border-transparent lg:border-neutral-200 dark:lg:border-neutral-800 overflow-y-auto">
             <Header />
             {children}
             <Footer />
           </div>
         </div>
+        </ThemeProvider>
       </body>
     </html>
   );

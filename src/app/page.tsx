@@ -5,6 +5,7 @@ import { Paragraph } from '@/components/Paragraph';
 import { Products } from '@/components/Products';
 import { TechStack } from '@/components/TechStack';
 import Image from 'next/image';
+import LogoCloud from '@/components/logo-cloud';
 
 export default function Home() {
   return (
@@ -21,9 +22,11 @@ export default function Home() {
       <Paragraph className='max-w-xl mt-4'>
         Leveraging 6+ years across both{' '}
         <Highlight>design and development</Highlight>, I specialize in
-        transforming <Highlight>complex challenges</Highlight> into elegant, <Highlight>user-focused</Highlight> web
-        solutions, from initial concept to <Highlight>polished code</Highlight>.
+        transforming <Highlight>complex challenges</Highlight> into elegant,{' '}
+        <Highlight>user-focused</Highlight> web solutions, from initial concept
+        to <Highlight>polished code</Highlight>.
       </Paragraph>
+      <LogoCloud />
       <Heading
         as='h2'
         className='font-semibold text-lg md:text-lg lg:text-2xl mt-20 mb-4'

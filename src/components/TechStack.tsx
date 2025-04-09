@@ -52,20 +52,21 @@ export const TechStack = () => {
     <div>
       <Heading
         as="h2"
-        className="font-black text-lg md:text-lg lg:text-lg mt-20 mb-4"
+        className="text-lg md:text-lg lg:text-2xl mt-20 mb-4"
       >
         Tech Stack
       </Heading>
       <div className="flex flex-wrap">
         {stack.map((item) => (
-          <Image
-            src={item.src}
-            key={item.src}
-            width={`200`}
-            height={`200`}
-            alt={item.title}
-            className={twMerge("object-contain mr-4 mb-4", item.className)}
-          />
+          <div key={item.src} className="mr-4 mb-4 px-3 py-2 rounded-md bg-neutral-50 dark:bg-neutral-800 flex items-center justify-center">
+            <Image
+              src={item.src}
+              width={`200`}
+              height={`200`}
+              alt={item.title}
+              className={twMerge("object-contain", item.className)}
+            />
+          </div>
         ))}
       </div>
     </div>

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Button } from "./Button";
 
 const defaultFormState = {
   name: {
@@ -24,12 +25,12 @@ export const Contact = () => {
     console.log(formData);
   };
   return (
-    <form className="form " onSubmit={handleSubmit}>
+    <form className="form max-w-xl" onSubmit={handleSubmit}>
       <div className="flex flex-col md:flex-row justify-between gap-5">
         <input
           type="text"
           placeholder="Your Name"
-          className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 py-2 rounded-md text-sm text-neutral-700 w-full"
+          className="bg-white dark:bg-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-300 dark:focus:ring-neutral-700 px-4 py-2.5 rounded-md text-sm text-neutral-700 dark:text-neutral-200 w-full border border-neutral-200 dark:border-neutral-800 placeholder:text-neutral-500 dark:placeholder:text-neutral-500 shadow-sm"
           value={formData.name.value}
           onChange={(e) => {
             setFormData({
@@ -44,7 +45,7 @@ export const Contact = () => {
         <input
           type="email"
           placeholder="Your email address"
-          className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 py-2 rounded-md text-sm text-neutral-700 w-full"
+          className="bg-white dark:bg-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-300 dark:focus:ring-neutral-700 px-4 py-2.5 rounded-md text-sm text-neutral-700 dark:text-neutral-200 w-full border border-neutral-200 dark:border-neutral-800 placeholder:text-neutral-500 dark:placeholder:text-neutral-500 shadow-sm"
           value={formData.email.value}
           onChange={(e) => {
             setFormData({
@@ -60,8 +61,8 @@ export const Contact = () => {
       <div>
         <textarea
           placeholder="Your Message"
-          rows={10}
-          className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 mt-4 py-2 rounded-md text-sm text-neutral-700 w-full"
+          rows={8}
+          className="bg-white dark:bg-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-300 dark:focus:ring-neutral-700 px-4 mt-4 py-2.5 rounded-md text-sm text-neutral-700 dark:text-neutral-200 w-full border border-neutral-200 dark:border-neutral-800 placeholder:text-neutral-500 dark:placeholder:text-neutral-500 shadow-sm"
           value={formData.message.value}
           onChange={(e) => {
             setFormData({
@@ -74,12 +75,11 @@ export const Contact = () => {
           }}
         />
       </div>
-      <button
-        className="w-full px-2 py-2 mt-4 bg-neutral-100 rounded-md font-bold text-neutral-500"
+      <Button
+        text="Submit"
         type="submit"
-      >
-        Submit{" "}
-      </button>
+        className="mt-6"
+      />
     </form>
   );
 };

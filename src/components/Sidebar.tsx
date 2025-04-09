@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Heading } from "./Heading";
 import { socials } from "@/constants/socials";
-import { Badge } from "./Badge";
+import { Button } from "./Button";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
 import { isMobile } from "@/lib/utils";
@@ -26,20 +26,20 @@ export const Sidebar = () => {
             animate={{ x: 0 }}
             transition={{ duration: 0.2, ease: "linear" }}
             exit={{ x: -200 }}
-            className="px-6  z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit  fixed lg:relative  h-screen left-0 flex flex-col justify-between"
+            className="px-6 z-[100] py-10 bg-neutral-100 dark:bg-neutral-900 max-w-[14rem] lg:w-fit fixed lg:relative h-screen left-0 flex flex-col justify-between"
           >
             <div className="flex-1 overflow-auto">
               <SidebarHeader />
               <Navigation setOpen={setOpen} />
             </div>
             <div onClick={() => isMobile() && setOpen(false)}>
-              <Badge href="/resume" text="Read Resume" />
+              <Button href="/resume" text="Read Resume" />
             </div>
           </motion.div>
         )}
       </AnimatePresence>
       <button
-        className="fixed lg:hidden bottom-4 right-4 h-8 w-8 border border-neutral-200 rounded-full backdrop-blur-sm flex items-center justify-center z-50"
+        className="fixed lg:hidden bottom-4 right-4 h-8 w-8 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-full backdrop-blur-sm flex items-center justify-center z-50"
         onClick={() => setOpen(!open)}
       >
         <IconLayoutSidebarRightCollapse className="h-4 w-4 text-secondary" />
@@ -65,20 +65,20 @@ export const Navigation = ({
           href={link.href}
           onClick={() => isMobile() && setOpen(false)}
           className={twMerge(
-            "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
-            isActive(link.href) && "bg-white shadow-md text-primary font-medium"
+            "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
+            isActive(link.href) && "bg-white dark:bg-neutral-800 shadow-md text-neutral-900 dark:text-white font-medium"
           )}
         >
           <link.icon
             className={twMerge(
-              "h-4 w-4 flex-shrink-0",
+              "h-4 w-4 flex-shrink-0 text-neutral-500 dark:text-neutral-400",
               isActive(link.href) && "hidden"
             )}
           />
           <link.iconfill
             className={twMerge(
               "h-4 w-4 flex-shrink-0 hidden",
-              isActive(link.href) && "block"
+              isActive(link.href) && "block text-neutral-900 dark:text-white"
             )}
           />
           <span>{link.label}</span>
@@ -93,7 +93,7 @@ export const Navigation = ({
           key={social.href}
           href={social.href}
           className={twMerge(
-            "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
+            "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
           )}
         >
           <social.icon
@@ -120,8 +120,8 @@ const SidebarHeader = () => {
         className="object-cover object-top rounded-full flex-shrink-0"
       />
       <div className="flex text-sm flex-col">
-        <p className="font-semibold text-primary text-base">0xDrew</p>
-        <p className="text-secondary text-xs">Developer</p>
+        <p className="font-semibold text-neutral-900 dark:text-white text-base">0xDrew</p>
+        <p className="text-neutral-600 dark:text-neutral-400 text-xs">Developer</p>
       </div>
     </div>
   );
