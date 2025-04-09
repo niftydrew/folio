@@ -33,7 +33,11 @@ export const Sidebar = () => {
               <Navigation setOpen={setOpen} />
             </div>
             <div onClick={() => isMobile() && setOpen(false)}>
-              <Button href="/resume" text="Read Resume" />
+              <Button 
+                href="https://calendly.com/0xdrew/30min" 
+                text="Schedule a Call" 
+                target="_blank"
+              />
             </div>
           </motion.div>
         )}

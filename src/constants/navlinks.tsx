@@ -9,6 +9,8 @@ import {
   RiFileList2Fill,
   RiMailLine,
   RiMailFill,
+  RiFilePaperLine,
+  RiFilePaperFill,
 } from 'react-icons/ri';
 
 export const navlinks = [
@@ -23,6 +25,12 @@ export const navlinks = [
     label: 'About',
     icon: RiMessage2Line,
     iconfill: RiMessage2Fill,
+  },
+  {
+    href: '/resume',
+    label: 'Resume',
+    icon: RiFilePaperLine,
+    iconfill: RiFilePaperFill,
   },
   {
     href: '/projects',
