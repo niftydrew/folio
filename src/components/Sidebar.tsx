@@ -24,29 +24,29 @@ export const Sidebar = () => {
           <motion.div
             initial={{ x: -200 }}
             animate={{ x: 0 }}
-            transition={{ duration: 0.2, ease: "linear" }}
+            transition={{ duration: 0.2, ease: 'linear' }}
             exit={{ x: -200 }}
-            className="px-6 z-[100] py-10 bg-neutral-100 dark:bg-neutral-900 max-w-[14rem] lg:w-fit fixed lg:relative h-screen left-0 flex flex-col justify-between"
+            className='px-6 z-[100] py-10 bg-neutral-100 dark:bg-neutral-900 max-w-[14rem] lg:w-fit fixed lg:relative h-screen left-0 flex flex-col justify-between'
           >
-            <div className="flex-1 overflow-auto">
+            <div className='flex-1 overflow-auto'>
               <SidebarHeader />
               <Navigation setOpen={setOpen} />
             </div>
             <div onClick={() => isMobile() && setOpen(false)}>
-              <Button 
-                href="https://calendly.com/0xdrew/30min" 
-                text="Schedule a Call" 
-                target="_blank"
+              <Button
+                href='https://calendly.com/0x-drew/general-meeting'
+                text='Schedule a Call'
+                target='_blank'
               />
             </div>
           </motion.div>
         )}
       </AnimatePresence>
       <button
-        className="fixed lg:hidden bottom-4 right-4 h-8 w-8 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-full backdrop-blur-sm flex items-center justify-center z-50"
+        className='fixed lg:hidden bottom-4 right-4 h-8 w-8 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-full backdrop-blur-sm flex items-center justify-center z-50'
         onClick={() => setOpen(!open)}
       >
-        <IconLayoutSidebarRightCollapse className="h-4 w-4 text-secondary" />
+        <IconLayoutSidebarRightCollapse className='h-4 w-4 text-secondary' />
       </button>
     </>
   );
