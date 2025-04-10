@@ -28,11 +28,19 @@ export const Header = () => {
 
   const updateTime = () => {
     const now = new Date();
-    // Format time as HH:MM:SS UTC
-    const hours = now.getUTCHours().toString().padStart(2, '0');
-    const minutes = now.getUTCMinutes().toString().padStart(2, '0');
-    const seconds = now.getUTCSeconds().toString().padStart(2, '0');
-    setCurrentTime(`${hours}:${minutes}:${seconds} UTC`);
+    // Format time as HH:MM:SS Local Time
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    
+    // Get timezone offset in hours and minutes
+    const offset = -now.getTimezoneOffset();
+    const offsetHours = Math.floor(Math.abs(offset) / 60);
+    const offsetMinutes = Math.abs(offset) % 60;
+    const offsetSign = offset >= 0 ? '+' : '-';
+    const offsetString = `GMT${offsetSign}${offsetHours.toString().padStart(2, '0')}:${offsetMinutes.toString().padStart(2, '0')}`;
+    
+    setCurrentTime(`${hours}:${minutes}:${seconds}`);
   };
 
   return (

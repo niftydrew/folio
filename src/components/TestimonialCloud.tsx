@@ -3,6 +3,7 @@
 import { testimonials } from '@/constants/testimonials';
 import { InfiniteSlider } from './ui/infinite-slider';
 import { Heading } from './Heading';
+import Link from 'next/link';
 
 export default function TestimonialCloud() {
   return (
@@ -27,12 +28,21 @@ export default function TestimonialCloud() {
                 {testimonials.map((testimonial) => (
                   <div
                     key={testimonial.id}
-                    className='flex-shrink-0 w-80 bg-neutral-100 dark:bg-neutral-900 border border-transparent dark:border-neutral-800 p-6 rounded-2xl flex flex-col gap-4'
+                    className='flex-shrink-0 w-80 bg-neutral-100 dark:bg-neutral-900 border border-transparent dark:border-neutral-800 p-6 rounded-2xl flex flex-col gap-4 relative group'
                   >
+                    {testimonial.href && (
+                      <Link 
+                        href={testimonial.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute inset-0 z-10 cursor-pointer rounded-2xl transition-all hover:bg-black/5 dark:hover:bg-white/5"
+                        aria-label={`View ${testimonial.author}'s profile`}
+                      />
+                    )}
                     <div className='flex items-center gap-3'>
                       <div className='w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-700 flex-shrink-0'>
                         <img 
-                          src={`https://i.pravatar.cc/150?u=${testimonial.author}`} 
+                          src={testimonial.src} 
                           alt={testimonial.author}
                           className='w-full h-full object-cover'
                         />
@@ -40,7 +50,7 @@ export default function TestimonialCloud() {
                       <div>
                         <p className='font-semibold text-sm'>{testimonial.author}</p>
                         <p className='text-xs text-neutral-500 dark:text-neutral-400'>
-                          {testimonial.role}
+                          {testimonial.handle}
                         </p>
                       </div>
                     </div>

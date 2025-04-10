@@ -45,7 +45,7 @@ export const products = [
       "A tool for selecting random holders from a token's holders list.",
     thumbnail: holderspicker,
     images: [holderspicker, holderspicker2],
-    stack: ['Nextjs', 'Tailwindcss', 'Shadcn UI', 'Web3', 'Solana'],
+    stack: ['Nextjs', 'Web3', 'Solana'],
     slug: 'holderspicker',
     content: (
       <div>

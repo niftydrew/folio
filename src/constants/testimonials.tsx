@@ -2,57 +2,51 @@ export interface Testimonial {
   id: string;
   content: string;
   author: string;
-  role: string;
+  handle: string;
   company?: string;
+  src: string;
+  href?: string;
 }
 
 export const testimonials: Testimonial[] = [
   {
     id: '1',
     content:
-      'Andrew delivered an exceptional website that perfectly captured our brand identity. His attention to detail and technical expertise are truly impressive.',
-    author: 'Sarah Johnson',
-    role: 'CEO',
-    company: 'TechNova',
+      'Andrew is an exceptional developer who consistently delivers high-quality code. His problem-solving abilities and attention to detail have been invaluable to our team projects. Working alongside him has been both educational and inspiring.',
+    author: 'Agg',
+    handle: '@aggcult',
+    company: 'Metrix Capital',
+    src: 'https://pbs.twimg.com/profile_images/1767824749239894016/TyJNdOKl_400x400.jpg',
+    href: 'https://twitter.com/aggcult',
   },
   {
     id: '2',
     content:
-      'Working with Andrew was a game changer for our project. He not only understood our requirements but also provided valuable suggestions to enhance the user experience.',
-    author: 'Michael Chen',
-    role: 'Product Manager',
-    company: 'Elemental Labs',
+      'Andrew has been a key contributor to our success at Web3 Accelerators. His exceptional ability to translate complex requirements into elegant solutions while maintaining focus on user experience has been invaluable to our team.',
+    author: 'Kelvin',
+    handle: '@KEmmra',
+    company: 'Web3 Accelerators',
+    src: 'https://pbs.twimg.com/profile_images/1815811149222584320/vmn1-KBX_400x400.jpg',
+    href: 'https://twitter.com/KEmmra',
   },
   {
     id: '3',
     content:
-      'The web application Andrew built for us has received incredible feedback from our users. His code is clean, well-documented, and extremely maintainable.',
-    author: 'Elena Rodriguez',
-    role: 'CTO',
-    company: 'Quantum Solutions',
+      'Andrew has a rare talent for combining technical excellence with beautiful design. His solutions are elegant, intuitive, and built with exceptional attention to detail. Working with him elevates the entire project.',
+    author: 'Papa Gray',
+    handle: '@iampapagray',
+    company: 'Translucid',
+    src: 'https://pbs.twimg.com/profile_images/1522664324317253632/FIWG2teC_400x400.jpg',
+    href: 'https://twitter.com/iampapagray',
   },
   {
     id: '4',
     content:
-      "Andrew's expertise in modern web technologies helped us transform our outdated platform into a sleek, high-performing application. Highly recommended!",
-    author: 'David Kim',
-    role: 'Director of Engineering',
-    company: 'Nexus Interactive',
-  },
-  {
-    id: '5',
-    content:
-      "We've worked with many developers, but Andrew stands out for his combination of technical skills and design sensibility. He truly understands the full stack.",
-    author: 'Rebecca Taylor',
-    role: 'Founder',
-    company: 'Creativ Studio',
-  },
-  {
-    id: '6',
-    content:
-      "Andrew's ability to translate our vision into code was remarkable. He delivered on time and provided excellent communication throughout the project.",
-    author: 'James Wilson',
-    role: 'Marketing Director',
-    company: 'Fusion Digital',
+      "Andrew implemented a custom EIP-1155 multi-token contract that reduced our gas costs by 47% and built an optimistic UI layer with client-side prediction that made our on-chain game feel responsive despite blockchain latency.",
+    author: '✨crisis',
+    handle: '@crisisdot',
+    company: 'Treasure',
+    src: 'https://pbs.twimg.com/profile_images/1629278971123695616/-mx2meJM_400x400.jpg',
+    href: 'https://twitter.com/crisisdot',
   },
 ];
