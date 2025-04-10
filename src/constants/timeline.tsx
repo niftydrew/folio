@@ -15,9 +15,9 @@ export const timeline: TimelineItem[] = [
     date: '2024 - Present',
     description: 'Building the future of Web3 marketing',
     responsibilities: [
-      'Spearheaded technical strategy and implementation of blockchain-based solutions for Web3 startups, resulting in accelerated product development cycles',
-      'Led architecture design and technology selection for decentralized applications, ensuring scalability and security across multiple blockchain protocols',
-      'Established robust technical standards and governance frameworks for smart contract development and decentralized infrastructure',
+      'Spearheaded technical strategy for Web3 marketing platforms, enabling brands to effectively reach and engage with blockchain communities',
+      'Architected and deployed marketing analytics systems that provide unique insights into decentralized ecosystem engagement and user behavior',
+      'Developed technical frameworks for tokenized marketing campaigns that incentivize authentic community growth and brand advocacy',
       'Cultivated strategic partnerships with leading blockchain networks and Web3 infrastructure providers to enhance technical capabilities',
       'Mentored technical teams on emerging Web3 technologies including zero-knowledge proofs, layer-2 solutions, and cross-chain interoperability',
     ],
@@ -29,7 +29,7 @@ export const timeline: TimelineItem[] = [
     date: '2021 - 2023',
     description: 'Mentoring and guiding startup founders',
     responsibilities: [
-      'Orchestrated end-to-end product development for innovative fintech solutions, driving user acquisition by 45% within 18 months',
+      'Orchestrated end-to-end product development for innovative web3 startups, increasing seed rounds success rate by 45% within 18 months',
       'Developed comprehensive product roadmaps aligned with market trends and business objectives in capital markets',
       'Implemented agile methodologies that reduced development cycles by 30% while maintaining product quality',
       'Conducted extensive market and competitor analysis to identify untapped opportunities and strategic advantages',
