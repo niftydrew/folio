@@ -4,6 +4,7 @@ import { Highlight } from '@/components/Highlight';
 import { Paragraph } from '@/components/Paragraph';
 import { Products } from '@/components/Products';
 import { TechStack } from '@/components/TechStack';
+import TestimonialCloud from '@/components/TestimonialCloud';
 import Image from 'next/image';
 import LogoCloud from '@/components/logo-cloud';
 
@@ -38,6 +39,7 @@ export default function Home() {
         What I&apos;ve been working on
       </Heading>
       <Products />
+      <TestimonialCloud />
       <TechStack />
     </Container>
   );
