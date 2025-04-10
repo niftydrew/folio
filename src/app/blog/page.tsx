@@ -27,8 +27,8 @@ export default async function Blog() {
 
   return (
     <Container>
-      <Heading className="pb-4">I write about technology</Heading>
-      <Paragraph className="pb-10">
+      <Heading className="mb-4">I write about technology</Heading>
+      <Paragraph className="mb-10">
         Articles about web development, design, and technology. I share my
         knowledge and insights on various topics, from front-end development to user experience, crypto, and AI.
       </Paragraph>

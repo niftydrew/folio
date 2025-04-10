@@ -34,7 +34,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
           alt="thumbnail"
           height="1000"
           width="1000"
-          className="rounded-md object-contain"
+          className="rounded-t-3xl object-contain"
         />
         <div className="absolute bottom-0 bg-white dark:bg-neutral-900 h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]" />
       </motion.div>
@@ -49,13 +49,13 @@ export const SingleProduct = ({ product }: { product: Product }) => {
               alt="product thumbnail"
               height="1000"
               width="1000"
-              className="h-14 w-16 md:h-40 md:w-60 object-cover object-top mr-4 mb-r border rounded-lg border-neutral-100 dark:border-neutral-700"
+              className="h-14 w-16 md:h-fit md:w-60 object-contain object-top mr-4 mb-r border rounded-lg border-neutral-100 dark:border-neutral-700"
             />
           </button>
         ))}
       </div>
       <div className="flex lg:flex-row justify-between items-center flex-col mt-20">
-        <Heading className="font-black mb-2 pb-1"> {product.title}</Heading>
+        <Heading className="font-semibold mb-2 pb-1"> {product.title}</Heading>
         <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
           {product.stack?.map((stack: string) => (
             <span

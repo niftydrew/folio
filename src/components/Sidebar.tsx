@@ -96,6 +96,8 @@ export const Navigation = ({
         <Link
           key={social.href}
           href={social.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className={twMerge(
             "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
           )}
