@@ -22,7 +22,7 @@ export const Heading = ({
     <Tag
       className={twMerge(
         Switzer.className,
-        "text-base md:text-xl lg:text-[42px] lg:leading-[110%] font-semibold text-black dark:text-white",
+        "text-base md:text-xl lg:text-4xl font-semibold text-black dark:text-white",
         className
       )}
     >

@@ -17,8 +17,12 @@ export default function Home() {
         width='100'
         className='object-cover object-top rounded-full flex-shrink-0'
       />
-      <Heading className='mt-6'>Hey, I&apos;m Andrew.</Heading>
-      <Heading>Designer & Developer</Heading>
+      <Heading className='mt-6 lg:text-[42px] lg:leading-[110%]'>
+        Hey, I&apos;m Andrew.
+      </Heading>
+      <Heading className='lg:text-[42px] lg:leading-[110%]'>
+        Designer & Developer
+      </Heading>
       <Paragraph className='max-w-xl mt-4'>
         Leveraging 6+ years across both{' '}
         <Highlight>design and development</Highlight>, I specialize in
