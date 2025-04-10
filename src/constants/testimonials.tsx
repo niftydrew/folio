@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 export interface Testimonial {
   id: string;
   content: string;
@@ -36,7 +34,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '4',
     content:
-      'Andrew\'s expertise in modern web technologies helped us transform our outdated platform into a sleek, high-performing application. Highly recommended!',
+      "Andrew's expertise in modern web technologies helped us transform our outdated platform into a sleek, high-performing application. Highly recommended!",
     author: 'David Kim',
     role: 'Director of Engineering',
     company: 'Nexus Interactive',
@@ -44,7 +42,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '5',
     content:
-      'We\'ve worked with many developers, but Andrew stands out for his combination of technical skills and design sensibility. He truly understands the full stack.',
+      "We've worked with many developers, but Andrew stands out for his combination of technical skills and design sensibility. He truly understands the full stack.",
     author: 'Rebecca Taylor',
     role: 'Founder',
     company: 'Creativ Studio',
@@ -52,7 +50,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '6',
     content:
-      'Andrew\'s ability to translate our vision into code was remarkable. He delivered on time and provided excellent communication throughout the project.',
+      "Andrew's ability to translate our vision into code was remarkable. He delivered on time and provided excellent communication throughout the project.",
     author: 'James Wilson',
     role: 'Marketing Director',
     company: 'Fusion Digital',

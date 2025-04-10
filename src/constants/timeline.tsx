@@ -1,6 +1,16 @@
-export const timeline = [
+export interface TimelineItem {
+  company: string;
+  companyUrl?: string;
+  title: string;
+  date: string;
+  description: string;
+  responsibilities: string[];
+}
+
+export const timeline: TimelineItem[] = [
   {
     company: 'Web3Accelerators | Dubai, UAE (Remote)',
+    companyUrl: 'https://web3accelerators.com',
     title: 'Chief Technology Officer',
     date: '2024 - Present',
     description: 'Building the future of Web3 marketing',
@@ -14,6 +24,7 @@ export const timeline = [
   },
   {
     company: 'Metrix Capital | Dubai, UAE (Remote)',
+    companyUrl: 'https://metrix.capital',
     title: 'Product Lead',
     date: '2021 - 2023',
     description: 'Mentoring and guiding startup founders',
@@ -53,6 +64,7 @@ export const timeline = [
   },
   {
     company: 'UCL Ghana Limited | Accra, Ghana',
+    companyUrl: 'https://uclghana.com',
     title: 'Product Design and Development Consultant',
     date: '2018 - 2019',
     description: 'Consulting on product development',

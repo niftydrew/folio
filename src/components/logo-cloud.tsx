@@ -1,5 +1,6 @@
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
-import { ProgressiveBlur } from '@/components/ui/progressive-blur';
+import { logos } from '@/constants/logos';
+import Link from 'next/link';
 
 export default function LogoCloud() {
   return (
@@ -12,79 +13,34 @@ export default function LogoCloud() {
               speed={40}
               gap={112}
             >
-              <div className='flex'>
-                <img
-                  className='mx-auto h-6 w-fit dark:invert'
-                  src='/images/logos/web3accelerators.svg'
-                  alt='Web3 Accelerators Logo'
-                  height='20'
-                  width='auto'
-                />
-              </div>
-
-              <div className='flex'>
-                <img
-                  className='mx-auto h-6 w-fit dark:invert'
-                  src='/images/logos/translucid.svg'
-                  alt='Translucid Logo'
-                  height='20'
-                  width='auto'
-                />
-              </div>
-              <div className='flex'>
-                <img
-                  className='mx-auto h-6 w-fit dark:invert'
-                  src='/images/logos/scia.svg'
-                  alt='Scia Logo'
-                  height='20'
-                  width='auto'
-                />
-              </div>
-              <div className='flex'>
-                <img
-                  className='mx-auto h-6 w-fit dark:invert'
-                  src='/images/logos/substruct.svg'
-                  alt='Substruct Logo'
-                  height='20'
-                  width='auto'
-                />
-              </div>
-              <div className='flex'>
-                <img
-                  className='mx-auto h-6 w-fit dark:invert'
-                  src='/images/logos/buidlme.svg'
-                  alt='Buidlme Logo'
-                  height='20'
-                  width='auto'
-                />
-              </div>
-              <div className='flex'>
-                <img
-                  className='mx-auto h-6 w-fit dark:invert'
-                  src='/images/logos/vested.svg'
-                  alt='Vested Logo'
-                  height='20'
-                  width='auto'
-                />
-              </div>
-              <div className='flex'>
-                <img
-                  className='mx-auto h-7 w-fit dark:invert'
-                  src='/images/logos/vates.svg'
-                  alt='Vates Logo'
-                  height='20'
-                  width='auto'
-                />
-              </div>
-              <div className='flex'>
-                <img
-                  className='mx-auto h-7 w-fit dark:invert'
-                  src='/images/logos/divestify.svg'
-                  alt='Divestify Logo'
-                  height='20'
-                  width='auto'
-                />
-              </div>
+              {logos.map((logo) => (
+                <div key={logo.alt} className='flex'>
+                  {logo.href ? (
+                    <Link 
+                      href={logo.href} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="transition-opacity hover:opacity-70"
+                    >
+                      <img
+                        className={`mx-auto ${logo.height} w-fit dark:invert`}
+                        src={logo.src}
+                        alt={logo.alt}
+                        height='20'
+                        width='auto'
+                      />
+                    </Link>
+                  ) : (
+                    <img
+                      className={`mx-auto ${logo.height} w-fit dark:invert`}
+                      src={logo.src}
+                      alt={logo.alt}
+                      height='20'
+                      width='auto'
+                    />
+                  )}
+                </div>
+              ))}
             </InfiniteSlider>
 
             <div className='bg-gradient-to-r from-background dark:from-neutral-900 absolute inset-y-0 left-0 w-20 z-10'></div>
