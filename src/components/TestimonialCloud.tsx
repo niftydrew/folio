@@ -27,7 +27,7 @@ export default function TestimonialCloud() {
                 {testimonials.map((testimonial) => (
                   <div
                     key={testimonial.id}
-                    className='flex-shrink-0 w-80 bg-neutral-100 dark:bg-neutral-900 dark:border dark:border-neutral-800 p-6 rounded-2xl flex flex-col gap-4'
+                    className='flex-shrink-0 w-80 bg-neutral-100 dark:bg-neutral-900 border border-transparent dark:border-neutral-800 p-6 rounded-2xl flex flex-col gap-4'
                   >
                     <div className='flex items-center gap-3'>
                       <div className='w-10 h-10 rounded-full overflow-hidden bg-neutral-200 dark:bg-neutral-700 flex-shrink-0'>
