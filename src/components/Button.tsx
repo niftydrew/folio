@@ -10,6 +10,7 @@ type ButtonProps = {
   target?: string;
   type?: "button" | "submit" | "reset";
   className?: string;
+  disabled?: boolean;
 };
 
 export const Button = ({
@@ -19,6 +20,7 @@ export const Button = ({
   target,
   type = "button",
   className,
+  disabled = false,
 }: ButtonProps) => {
   const baseStyles = 'bg-neutral-950 dark:bg-neutral-800 no-underline group cursor-pointer relative shadow-lg shadow-neutral-300/20 dark:shadow-neutral-900/30 rounded-full p-px text-sm font-medium leading-6 tracking-tight text-white inline-block';
   
@@ -63,7 +65,8 @@ export const Button = ({
     <button
       type={type}
       onClick={onClick}
-      className={`${baseStyles} ${className || ''}`}
+      disabled={disabled}
+      className={`${baseStyles} ${className || ''} ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
     >
       <span className='absolute inset-0 overflow-hidden rounded-full'>
         <span className='absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(100,100,100,0.6)_0%,rgba(56,189,248,0)_75%)] dark:bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(150,150,150,0.4)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100'></span>

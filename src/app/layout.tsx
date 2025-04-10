@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LoadingProvider } from "@/components/loading-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const switzer = localFont({
   src: "../../fonts/Switzer-Variable.woff2",
@@ -57,6 +58,7 @@ export default function RootLayout({
                 <Header />
                 {children}
                 <Footer />
+                <Toaster />
               </div>
             </div>
           </LoadingProvider>
