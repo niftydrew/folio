@@ -1,4 +1,4 @@
-import { RiTwitterXFill, RiLinkedinFill } from 'react-icons/ri';
+import { RiTwitterXFill, RiLinkedinFill, RiGithubFill } from 'react-icons/ri';
 import { TbBrandDribbbleFilled } from 'react-icons/tb';
 
 export const socials = [
@@ -10,9 +10,9 @@ export const socials = [
     width: 5,
   },
   {
-    href: 'https://www.linkedin.com/in/andrew-akyampong-21807510b/',
-    label: 'LinkedIn',
-    icon: RiLinkedinFill,
+    href: 'https://github.com/niftydrew',
+    label: 'Github',
+    icon: RiGithubFill,
     height: 4,
     width: 4,
   },
