@@ -8,15 +8,15 @@ import { Blogs } from "@/components/Blogs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Andrew Akyampong",
+  title: "Blog | 0xDrew",
   description:
     "Thoughts and insights on web development, design, and technology by Andrew Akyampong. Designer & Developer with 6+ years experience.",
   openGraph: {
-    title: "Blog | Andrew Akyampong",
+    title: "Blog | 0xDrew",
     description: "Thoughts and insights on web development, design, and technology by Andrew Akyampong.",
   },
   twitter: {
-    title: "Blog | Andrew Akyampong",
+    title: "Blog | 0xDrew",
     description: "Thoughts and insights on web development, design, and technology by Andrew Akyampong.",
   },
 };
@@ -29,8 +29,8 @@ export default async function Blog() {
     <Container>
       <Heading className="pb-4">I write about technology</Heading>
       <Paragraph className="pb-10">
-        Ever since <Highlight> I was a kid</Highlight>, I&apos;ve been
-        fascinated by technology.
+        Articles about web development, design, and technology. I share my
+        knowledge and insights on various topics, from front-end development to user experience, crypto, and AI.
       </Paragraph>
       <Blogs blogs={data} />
     </Container>
