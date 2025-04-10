@@ -43,10 +43,11 @@ export const Sidebar = () => {
         )}
       </AnimatePresence>
       <button
-        className='fixed lg:hidden bottom-4 right-4 h-8 w-8 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-full backdrop-blur-sm flex items-center justify-center z-50'
+        className='fixed lg:hidden bottom-4 right-4 h-10 w-10 border-2 border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 rounded-full shadow-lg flex items-center justify-center z-50 hover:scale-105 transition-transform'
         onClick={() => setOpen(!open)}
+        aria-label="Toggle sidebar"
       >
-        <IconLayoutSidebarRightCollapse className='h-4 w-4 text-secondary' />
+        <IconLayoutSidebarRightCollapse className='h-5 w-5 text-neutral-800 dark:text-white' />
       </button>
     </>
   );
