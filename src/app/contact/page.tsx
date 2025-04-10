@@ -29,7 +29,7 @@ export default function Projects() {
       <Heading className='mb-4'>Contact Me</Heading>
       <Paragraph className='mb-10 max-w-xl'>
         Have a question or just want to chat? Fill out the
-        contact form below. I'll get back to you as soon as possible.
+        contact form below. I&apos;ll get back to you as soon as possible.
       </Paragraph>
       <Contact />
     </Container>

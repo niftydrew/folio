@@ -57,7 +57,7 @@ export const products = [
           holders for airdrops, rewards, and community initiatives.
         </p>
         <p>
-          Built with Next.js and integrated with Solana's blockchain, Holders
+          Built with Next.js and integrated with Solana&apos;s blockchain, Holders
           Picker allows users to define minimum holdings, among other filters.
           It queries the blockchain to check holders that fit criteria and
           select random number of those holders as defined by the user. The

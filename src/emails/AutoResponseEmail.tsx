@@ -54,7 +54,7 @@ export const AutoResponseEmail = ({
           <Heading style={heading}>Thanks for reaching out</Heading>
           <Text style={paragraph}>Hi {name},</Text>
           <Text style={paragraph}>
-            Thank you for contacting me through my portfolio website. I've
+            Thank you for contacting me through my portfolio website. I&apos;ve
             received your message and will get back to you as soon as possible,
             typically within 24-48 hours.
           </Text>
