@@ -24,7 +24,7 @@ export default function LogoCloud() {
 
               <div className='flex'>
                 <img
-                  className='mx-auto h-5 w-fit dark:invert'
+                  className='mx-auto h-6 w-fit dark:invert'
                   src='/images/logos/translucid.svg'
                   alt='Translucid Logo'
                   height='20'
@@ -33,7 +33,7 @@ export default function LogoCloud() {
               </div>
               <div className='flex'>
                 <img
-                  className='mx-auto h-5 w-fit dark:invert'
+                  className='mx-auto h-6 w-fit dark:invert'
                   src='/images/logos/scia.svg'
                   alt='Scia Logo'
                   height='20'
@@ -42,7 +42,7 @@ export default function LogoCloud() {
               </div>
               <div className='flex'>
                 <img
-                  className='mx-auto h-5 w-fit dark:invert'
+                  className='mx-auto h-6 w-fit dark:invert'
                   src='/images/logos/substruct.svg'
                   alt='Substruct Logo'
                   height='20'
@@ -51,7 +51,7 @@ export default function LogoCloud() {
               </div>
               <div className='flex'>
                 <img
-                  className='mx-auto h-5 w-fit dark:invert'
+                  className='mx-auto h-6 w-fit dark:invert'
                   src='/images/logos/buidlme.svg'
                   alt='Buidlme Logo'
                   height='20'
@@ -60,7 +60,7 @@ export default function LogoCloud() {
               </div>
               <div className='flex'>
                 <img
-                  className='mx-auto h-5 w-fit dark:invert'
+                  className='mx-auto h-6 w-fit dark:invert'
                   src='/images/logos/vested.svg'
                   alt='Vested Logo'
                   height='20'
@@ -69,7 +69,7 @@ export default function LogoCloud() {
               </div>
               <div className='flex'>
                 <img
-                  className='mx-auto h-6 w-fit dark:invert'
+                  className='mx-auto h-7 w-fit dark:invert'
                   src='/images/logos/vates.svg'
                   alt='Vates Logo'
                   height='20'
@@ -78,7 +78,7 @@ export default function LogoCloud() {
               </div>
               <div className='flex'>
                 <img
-                  className='mx-auto h-6 w-fit dark:invert'
+                  className='mx-auto h-7 w-fit dark:invert'
                   src='/images/logos/divestify.svg'
                   alt='Divestify Logo'
                   height='20'
