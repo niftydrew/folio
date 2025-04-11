@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import React from 'react';
 
 export type Product = {
   title: string;

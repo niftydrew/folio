@@ -55,14 +55,14 @@ export const products = [
           Shonen Pump is a meme cryptocurrency project built on the BNB
           blockchain, created to highlight issues within the manga and anime
           industry. The landing page combines vibrant anime-inspired visuals
-          with informative content about the project's mission to advocate for
+          with informative content about the project&apos;s mission to advocate for
           fair compensation for artists and creators.
         </p>
         <p>
           Designed using Framer, the website features animated elements that pay
           homage to classic anime aesthetics while maintaining modern web design
           principles. The page includes tokenomics information, a roadmap for
-          community initiatives, and direct connections to the project's social
+          community initiatives, and direct connections to the project&apos;s social
           media channels where supporters can join the movement for positive
           change in the anime industry.
         </p>
@@ -85,7 +85,7 @@ export const products = [
         <p>
           SCIA is a cutting-edge AI agent trading platform designed to
           revolutionize market analysis and trade execution. The landing page
-          showcases the platform's ability to analyze market trends, execute
+          showcases the platform&apos;s ability to analyze market trends, execute
           trades, and optimize investment strategies without human intervention.
         </p>
         <p>
@@ -94,7 +94,7 @@ export const products = [
           sophistication of the platform. The interface presents complex AI
           trading concepts in an accessible way, using interactive elements and
           clear information architecture to guide potential users through the
-          platform's capabilities and benefits.
+          platform&apos;s capabilities and benefits.
         </p>
       </div>
     ),
@@ -114,14 +114,14 @@ export const products = [
           The Kelvin Emmra Portfolio website was crafted to showcase the
           professional services and expertise of a Web3 marketing specialist.
           The design emphasizes clarity and professionalism while incorporating
-          subtle blockchain-inspired visual elements that reinforce the client's
+          subtle blockchain-inspired visual elements that reinforce the client&apos;s
           industry focus.
         </p>
         <p>
           This responsive portfolio features a minimalist layout with strategic
           content organization to highlight client testimonials, case studies,
           and service offerings. The user experience was carefully optimized to
-          guide potential clients through Kelvin's expertise and achievements in
+          guide potential clients through Kelvin&apos;s expertise and achievements in
           the blockchain space, with particular attention to loading performance
           and mobile responsiveness to ensure accessibility across all devices.
         </p>
@@ -132,7 +132,7 @@ export const products = [
     href: 'https://holders.web3accelerators.com',
     title: 'Holders Picker',
     description:
-      "A tool for selecting random holders from a token's holders list.",
+      "A tool for selecting random holders from a token&apos;s holders list.",
     thumbnail: holderspicker,
     images: [holderspicker, holderspicker2],
     githubLink: 'https://github.com/niftydrew/token-holders-picker',
