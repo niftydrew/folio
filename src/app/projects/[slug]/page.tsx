@@ -8,7 +8,9 @@ import { products } from "@/constants/products";
 import { Product } from "@/types/products";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { redirect } from "next/navigation";
+import { HiArrowLeft } from "react-icons/hi";
 
 type Props = {
   params: { slug: string };
@@ -44,6 +46,15 @@ export default function SingleProjectPage({
   }
   return (
     <Container>
+      <div className="mb-6">
+        <Link 
+          href="/projects" 
+          className="inline-flex items-center text-sm font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
+        >
+          <HiArrowLeft className="mr-2 h-4 w-4" />
+          Back to Projects
+        </Link>
+      </div>
       <SingleProduct product={product} />
     </Container>
   );

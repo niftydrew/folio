@@ -7,6 +7,7 @@ import { Paragraph } from "./Paragraph";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
+import { RiGithubFill } from 'react-icons/ri';
 
 export const SingleProduct = ({ product }: { product: Product }) => {
   const [activeImage, setActiveImage] = useState<StaticImageData | string>(
@@ -74,12 +75,30 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         {product?.content}
       </div>
 
-      <Button 
-        text="Live Preview"
-        href={product.href}
-        target="_blank"
-        className="mt-8"
-      />
+      <div className="flex gap-4 mt-8">
+        <Button 
+          text="Live Preview"
+          href={product.href}
+          target="_blank"
+        />
+        {product.githubLink && (
+          <Link
+            href={product.githubLink}
+            target="_blank"
+            className="bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 no-underline group cursor-pointer relative shadow-lg shadow-neutral-300/20 dark:shadow-neutral-900/30 rounded-full p-px text-sm font-medium leading-6 tracking-tight text-white inline-block"
+          >
+            <span className='absolute inset-0 overflow-hidden rounded-full'>
+              <span className='absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(100,100,100,0.6)_0%,rgba(56,189,248,0)_75%)] dark:bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(150,150,150,0.4)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100'></span>
+            </span>
+            <div className='relative flex items-center z-10 rounded-full bg-transparent py-1.5 px-4 ring-1 ring-white/20 dark:ring-white/10'>
+              <RiGithubFill className="mr-2 text-lg" />
+              <span>View Code</span>
+            </div>
+          </Link>
+        )}
+      </div>
+
+      
     </div>
   );
 };

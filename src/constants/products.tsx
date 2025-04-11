@@ -2,10 +2,12 @@ import web3accelerators from 'public/images/web3accelerators.png';
 import web3accelerators2 from 'public/images/web3accelerators2.png';
 import holderspicker from 'public/images/holderspicker.png';
 import holderspicker2 from 'public/images/holderspicker2.png';
-import sidefolioMoonbeam from 'public/images/sidefolio-moonbeam.png';
-import sidefolioMoonbeam2 from 'public/images/sidefolio-moonbeam-2.png';
-import sidefolioTailwindMasterKit from 'public/images/sidefolio-tailwindmasterkit.png';
-import sidefolioTailwindMasterKit2 from 'public/images/sidefolio-tailwindmasterkit-2.png';
+import scia from 'public/images/scia.png';
+import scia2 from 'public/images/scia2.png';
+import kelvin from 'public/images/kelvin.png';
+import kelvin2 from 'public/images/kelvin2.png';
+import shonen from 'public/images/shonen.png';
+import shonen2 from 'public/images/shonen2.png';
 
 export const products = [
   {
@@ -15,7 +17,7 @@ export const products = [
       'Full suite digital marketing and community growth services engineered to connect you to your ideal audience.',
     thumbnail: web3accelerators,
     images: [web3accelerators, web3accelerators2],
-    stack: ['Web design', 'Figma', 'Framer'],
+    stack: ['Web design', 'Framer'],
     slug: 'web3accelerators',
     content: (
       <div>
@@ -39,14 +41,103 @@ export const products = [
     ),
   },
   {
+    href: 'https://shonenpump.com',
+    title: 'Shonen Pump',
+    description:
+      'Crypto meme coin landing page for revolution against exploitation in the manga and anime industry.',
+    thumbnail: shonen,
+    images: [shonen, shonen2],
+    stack: ['Web design', 'Framer'],
+    slug: 'shonen-pump',
+    content: (
+      <div>
+        <p>
+          Shonen Pump is a meme cryptocurrency project built on the BNB
+          blockchain, created to highlight issues within the manga and anime
+          industry. The landing page combines vibrant anime-inspired visuals
+          with informative content about the project's mission to advocate for
+          fair compensation for artists and creators.
+        </p>
+        <p>
+          Designed using Framer, the website features animated elements that pay
+          homage to classic anime aesthetics while maintaining modern web design
+          principles. The page includes tokenomics information, a roadmap for
+          community initiatives, and direct connections to the project's social
+          media channels where supporters can join the movement for positive
+          change in the anime industry.
+        </p>
+      </div>
+    ),
+  },
+
+  {
+    href: 'https://scia.ai',
+    title: 'Scia AI',
+    description:
+      'Landing page for an AI agent trading platform that automates market analysis and execution',
+    thumbnail: scia,
+    images: [scia, scia2],
+    githubLink: 'https://github.com/niftydrew/scia-landing',
+    stack: ['Nextjs', 'Tailwindcss'],
+    slug: 'scia',
+    content: (
+      <div>
+        <p>
+          SCIA is a cutting-edge AI agent trading platform designed to
+          revolutionize market analysis and trade execution. The landing page
+          showcases the platform's ability to analyze market trends, execute
+          trades, and optimize investment strategies without human intervention.
+        </p>
+        <p>
+          Built with Next.js and styled with Tailwind CSS, the website features
+          a modern, professional design that emphasizes the technological
+          sophistication of the platform. The interface presents complex AI
+          trading concepts in an accessible way, using interactive elements and
+          clear information architecture to guide potential users through the
+          platform's capabilities and benefits.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: 'https://kelvinemmra.com',
+    title: 'Kelvin Emmra Portfolio',
+    description:
+      'Portfolio website for a Web3 marketing professional showcasing services and expertise in blockchain promotion.',
+    thumbnail: kelvin,
+    images: [kelvin, kelvin2],
+    stack: ['Web design', 'Framer'],
+    slug: 'kelvin-portfolio',
+    content: (
+      <div>
+        <p>
+          The Kelvin Emmra Portfolio website was crafted to showcase the
+          professional services and expertise of a Web3 marketing specialist.
+          The design emphasizes clarity and professionalism while incorporating
+          subtle blockchain-inspired visual elements that reinforce the client's
+          industry focus.
+        </p>
+        <p>
+          This responsive portfolio features a minimalist layout with strategic
+          content organization to highlight client testimonials, case studies,
+          and service offerings. The user experience was carefully optimized to
+          guide potential clients through Kelvin's expertise and achievements in
+          the blockchain space, with particular attention to loading performance
+          and mobile responsiveness to ensure accessibility across all devices.
+        </p>
+      </div>
+    ),
+  },
+  {
     href: 'https://holders.web3accelerators.com',
     title: 'Holders Picker',
     description:
       "A tool for selecting random holders from a token's holders list.",
     thumbnail: holderspicker,
     images: [holderspicker, holderspicker2],
+    githubLink: 'https://github.com/niftydrew/token-holders-picker',
     stack: ['Nextjs', 'Web3', 'Solana'],
-    slug: 'holderspicker',
+    slug: 'holders-picker',
     content: (
       <div>
         <p>
@@ -57,73 +148,13 @@ export const products = [
           holders for airdrops, rewards, and community initiatives.
         </p>
         <p>
-          Built with Next.js and integrated with Solana&apos;s blockchain, Holders
-          Picker allows users to define minimum holdings, among other filters.
-          It queries the blockchain to check holders that fit criteria and
-          select random number of those holders as defined by the user. The
+          Built with Next.js and integrated with Solana&apos;s blockchain,
+          Holders Picker allows users to define minimum holdings, among other
+          filters. It queries the blockchain to check holders that fit criteria
+          and select random number of those holders as defined by the user. The
           application is designed for teams conducting airdrops, giveaways, or
           community rewards on the Solana network.
         </p>
-      </div>
-    ),
-  },
-  {
-    href: 'https://gomoonbeam.com',
-    title: 'Moonbeam',
-    description:
-      'Never write from scratch again with Moonbeam, your AI first writing tool',
-    thumbnail: sidefolioMoonbeam,
-    images: [sidefolioMoonbeam, sidefolioMoonbeam2],
-    stack: ['Nextjs', 'Tailwindcss'],
-    slug: 'moonbeam',
-    content: (
-      <div>
-        <p>
-          Sit eiusmod ex mollit sit quis ad deserunt. Sint aliqua aliqua ullamco
-          dolore nulla amet tempor sunt est ipsum. Dolor laborum eiusmod
-          cupidatat consectetur velit ipsum. Deserunt nisi in culpa laboris
-          cupidatat elit velit aute mollit nisi. Officia ad exercitation laboris
-          non cupidatat duis esse velit ut culpa et.{' '}
-        </p>
-        <p>
-          Exercitation pariatur enim occaecat adipisicing nostrud adipisicing
-          Lorem tempor ullamco exercitation quis et dolor sint. Adipisicing sunt
-          sit aute fugiat incididunt nostrud consequat proident fugiat id.
-          Officia aliquip laborum labore eu culpa dolor reprehenderit eu ex enim
-          reprehenderit. Cillum Lorem veniam eu magna exercitation.
-          Reprehenderit adipisicing minim et officia enim et veniam Lorem
-          excepteur velit adipisicing et Lorem magna.
-        </p>{' '}
-      </div>
-    ),
-  },
-  {
-    href: 'https://tailwindmasterkit.com',
-    title: 'Tailwind Master Kit',
-    description:
-      'A beautiful and comprehensive Tailwind CSS components library for building modern websites and applications.',
-    thumbnail: sidefolioTailwindMasterKit,
-    images: [sidefolioTailwindMasterKit, sidefolioTailwindMasterKit2],
-    stack: ['Nextjs', 'Tailwindcss'],
-    slug: 'tailwindmasterkit',
-    content: (
-      <div>
-        <p>
-          Sit eiusmod ex mollit sit quis ad deserunt. Sint aliqua aliqua ullamco
-          dolore nulla amet tempor sunt est ipsum. Dolor laborum eiusmod
-          cupidatat consectetur velit ipsum. Deserunt nisi in culpa laboris
-          cupidatat elit velit aute mollit nisi. Officia ad exercitation laboris
-          non cupidatat duis esse velit ut culpa et.{' '}
-        </p>
-        <p>
-          Exercitation pariatur enim occaecat adipisicing nostrud adipisicing
-          Lorem tempor ullamco exercitation quis et dolor sint. Adipisicing sunt
-          sit aute fugiat incididunt nostrud consequat proident fugiat id.
-          Officia aliquip laborum labore eu culpa dolor reprehenderit eu ex enim
-          reprehenderit. Cillum Lorem veniam eu magna exercitation.
-          Reprehenderit adipisicing minim et officia enim et veniam Lorem
-          excepteur velit adipisicing et Lorem magna.
-        </p>{' '}
       </div>
     ),
   },

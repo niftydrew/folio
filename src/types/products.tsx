@@ -6,6 +6,7 @@ export type Product = {
   thumbnail: StaticImageData;
   images: StaticImageData[] | string[];
   href: string;
+  githubLink?: string;
   slug?: string;
   stack?: string[];
   content?: React.ReactNode | string;
