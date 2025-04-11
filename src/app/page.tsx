@@ -7,8 +7,12 @@ import { TechStack } from '@/components/TechStack';
 import TestimonialCloud from '@/components/TestimonialCloud';
 import Image from 'next/image';
 import LogoCloud from '@/components/logo-cloud';
+import { BlogsPreview } from '@/components/BlogsPreview';
+import { getAllBlogs } from '../../lib/getAllBlogs';
 
-export default function Home() {
+export default async function Home() {
+  const blogs = await getAllBlogs();
+  const blogData = blogs.map(({ component, ...meta }) => meta);
   return (
     <Container>
       <Image
@@ -39,6 +43,15 @@ export default function Home() {
         What I&apos;ve been working on
       </Heading>
       <Products limit={4} />
+
+      <Heading
+        as='h2'
+        className='font-semibold text-lg md:text-lg lg:text-2xl mt-20 mb-4'
+      >
+        Latest articles
+      </Heading>
+      <BlogsPreview blogs={blogData} limit={3} />
+
       <TestimonialCloud />
       <TechStack />
     </Container>
