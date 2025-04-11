@@ -11,10 +11,10 @@ export default function LogoCloud() {
             <InfiniteSlider
               speedOnHover={20}
               speed={40}
-              gap={112}
+              gap={24}
             >
               {logos.map((logo) => (
-                <div key={logo.alt} className='flex'>
+                <div key={logo.alt} className='flex lg:px-8'>
                   {logo.href ? (
                     <Link 
                       href={logo.href} 
