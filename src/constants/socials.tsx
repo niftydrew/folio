@@ -3,7 +3,7 @@ import { TbBrandDribbbleFilled } from 'react-icons/tb';
 
 export const socials = [
   {
-    href: 'https://x.com/0xcoderdrew',
+    href: 'https://x.com/_0xdrew',
     label: 'X (Twitter)',
     icon: RiTwitterXFill,
     height: 4,
