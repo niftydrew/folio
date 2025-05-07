@@ -26,7 +26,7 @@ export const testimonials: Testimonial[] = [
     author: 'Kelvin',
     handle: '@KEmmra',
     company: 'Web3 Accelerators',
-    src: 'https://pbs.twimg.com/profile_images/1815811149222584320/vmn1-KBX_400x400.jpg',
+    src: 'https://pbs.twimg.com/profile_images/1919380537833041920/r2r7ZLlA_400x400.jpg',
     href: 'https://twitter.com/KEmmra',
   },
   {
