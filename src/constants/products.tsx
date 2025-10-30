@@ -10,8 +10,118 @@ import shonen from 'public/images/shonen.png';
 import shonen2 from 'public/images/shonen2.png';
 import drew from 'public/images/0xdrew.png';
 import drew2 from 'public/images/0xdrew2.png';
+import polysimplr from 'public/images/polysimplr-dark.png';
+import polysimplr2 from 'public/images/polysimplr-light.png';
+import umbra from 'public/images/umbra.png';
+import umbra2 from 'public/images/umbra2.png';
 
 export const products = [
+  {
+    href: 'https://www.polysimplr.com',
+    title: 'Polysimplr',
+    description:
+      'AI-powered platform designed to make prediction markets accessible with simplified interfaces, real-time market intelligence, and smart trading insights.',
+    thumbnail: polysimplr,
+    images: [polysimplr, polysimplr2],
+    stack: [
+      'AI',
+      'Nextjs',
+      'Tailwindcss',
+      'Bun',
+      'Nestjs',
+      'Prediction Markets',
+    ],
+    slug: 'polysimplr',
+    content: (
+      <div>
+        <p>
+          Polysimplr is an innovative AI-powered platform that democratizes
+          access to prediction markets, making them simpler and more accessible
+          for everyone. The platform combines sophisticated AI-driven insights
+          with an intuitive interface to help users trade smarter in prediction
+          markets like Polymarket.
+        </p>
+        <p>
+          The design focuses on simplicity without sacrificing functionality,
+          providing real-time market intelligence and AI-powered analysis that
+          helps users make informed decisions. With features tailored for both
+          beginners and experienced traders, Polysimplr bridges the gap between
+          complex prediction market mechanics and user-friendly accessibility,
+          making it easier to navigate and succeed in the prediction market
+          ecosystem.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: 'https://shonenpump.com',
+    title: 'Shonen Pump',
+    description:
+      'Crypto-powered manga reader platform revolutionizing how fans access and support manga creators while fighting industry exploitation.',
+    thumbnail: shonen,
+    images: [shonen, shonen2],
+    stack: [
+      'Web3',
+      'Crypto',
+      'Nextjs',
+      'Tailwindcss',
+      'Bun',
+      'Platform Design',
+    ],
+    slug: 'shonen-pump',
+    content: (
+      <div>
+        <p>
+          Shonen Pump has evolved from a meme cryptocurrency into a
+          comprehensive crypto manga reader platform built on the Solana
+          blockchain. The platform enables manga enthusiasts to read their
+          favorite series while directly supporting creators through
+          cryptocurrency, addressing long-standing issues of fair compensation
+          in the manga and anime industry.
+        </p>
+        <p>
+          The platform features an immersive reading experience with
+          anime-inspired design aesthetics, integrating Web3 technology to
+          create a sustainable ecosystem for manga creators and fans. Users can
+          access manga content, participate in the community, and contribute to
+          a movement advocating for creator rights and fair compensation. By
+          combining blockchain technology with manga distribution, Shonen Pump
+          represents a new model for content consumption that prioritizes
+          creator welfare.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: 'https://www.umbrastrategy.xyz',
+    title: 'Umbra Strategy',
+    description:
+      'DeFi treasury strategy platform with perpetual token economics, MetaDAO allocations, and deflationary burn mechanisms on Solana.',
+    thumbnail: umbra,
+    images: [umbra, umbra2],
+    stack: ['Web3', 'DeFi', 'Nextjs', 'Tailwindcss', 'Solana', 'Treasury'],
+    slug: 'umbra-strategy',
+    content: (
+      <div>
+        <p>
+          Umbra Strategy is an innovative DeFi platform built on Solana that
+          implements a self-reinforcing perpetual cycle: Trade → Fund → Reward →
+          Burn → Repeat. The platform manages treasury positions and distributes
+          MetaDAO allocations to $UMBSTRAT token holders based on their score,
+          creating a sustainable ecosystem that rewards long-term holders.
+        </p>
+        <p>
+          What sets Umbra apart is its unique deflationary mechanism where users
+          burn 10% of the USD value in $UMBSTRAT tokens to claim their MetaDAO
+          allocations, creating continuous buying pressure and scarcity. The
+          platform features real-time treasury tracking, transparent position
+          management, and a scoring system that determines allocation shares.
+          Built with Next.js and integrated with Solana blockchain, it
+          exemplifies modern Web3 UX with sophisticated tokenomics.
+        </p>
+      </div>
+    ),
+  },
   {
     href: 'https://web3accelerators.com',
     title: 'Web3 Accelerators',
@@ -69,35 +179,7 @@ export const products = [
       </div>
     ),
   },
-  {
-    href: 'https://shonenpump.com',
-    title: 'Shonen Pump',
-    description:
-      'Crypto meme coin landing page for revolution against exploitation in the manga and anime industry.',
-    thumbnail: shonen,
-    images: [shonen, shonen2],
-    stack: ['Web design', 'Framer'],
-    slug: 'shonen-pump',
-    content: (
-      <div>
-        <p>
-          Shonen Pump is a meme cryptocurrency project built on the BNB
-          blockchain, created to highlight issues within the manga and anime
-          industry. The landing page combines vibrant anime-inspired visuals
-          with informative content about the project&apos;s mission to advocate
-          for fair compensation for artists and creators.
-        </p>
-        <p>
-          Designed using Framer, the website features animated elements that pay
-          homage to classic anime aesthetics while maintaining modern web design
-          principles. The page includes tokenomics information, a roadmap for
-          community initiatives, and direct connections to the project&apos;s
-          social media channels where supporters can join the movement for
-          positive change in the anime industry.
-        </p>
-      </div>
-    ),
-  },
+
   {
     href: 'https://scia.ai',
     title: 'Scia AI',
