@@ -26,7 +26,7 @@ export const testimonials: Testimonial[] = [
     author: 'Kelvin',
     handle: '@KEmmra',
     company: 'Web3 Accelerators',
-    src: 'https://pbs.twimg.com/profile_images/1919380537833041920/r2r7ZLlA_400x400.jpg',
+    src: 'https://pbs.twimg.com/profile_images/1982030745691410432/xdpcq0wr_400x400.jpg',
     href: 'https://twitter.com/KEmmra',
   },
   {
@@ -42,7 +42,7 @@ export const testimonials: Testimonial[] = [
   {
     id: '4',
     content:
-      "Andrew implemented a custom EIP-1155 multi-token contract that reduced our gas costs by 47% and built an optimistic UI layer with client-side prediction that made our on-chain game feel responsive despite blockchain latency.",
+      'Andrew implemented a custom EIP-1155 multi-token contract that reduced our gas costs by 47% and built an optimistic UI layer with client-side prediction that made our on-chain game feel responsive despite blockchain latency.',
     author: '✨crisis',
     handle: '@crisisdot',
     company: 'Treasure',
