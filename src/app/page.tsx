@@ -26,7 +26,7 @@ export default async function Home() {
         Hey, I&apos;m Andrew.
       </Heading>
       <Heading className='lg:text-[42px] lg:leading-[110%]'>
-        Designer & Developer
+        Designer & Developer, All round Product Guy
       </Heading>
       <Paragraph className='max-w-xl mt-4'>
         Leveraging 6+ years across both{' '}

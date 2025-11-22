@@ -15,24 +15,24 @@ const switzer = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "0xDrew | Designer & Developer",
+  title: "0xDrew | Product Guy, Designer & Developer",
   description:
-    "Designer & Developer with 6+ years experience transforming complex challenges into elegant, user-focused web solutions, from initial concept to polished code.",
-  keywords: ["web development", "design", "frontend", "React", "Next.js", "TypeScript", "UI/UX", "full-stack"],
+    "Product Guy, Designer & Developer with 6+ years experience building products that bridge design and technology, from concept to execution.",
+  keywords: ["web development", "design", "frontend", "React", "Next.js", "TypeScript", "UI/UX", "full-stack", "product"],
   authors: [{ name: "0xDrew" }],
   creator: "0xDrew",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://0xdrew.com",
-    title: "0xDrew | Designer & Developer",
-    description: "Designer & Developer with 6+ years experience transforming complex challenges into elegant, user-focused web solutions.",
+    title: "0xDrew | Product Guy, Designer & Developer",
+    description: "Product Guy, Designer & Developer with 6+ years experience transforming complex challenges into elegant, user-focused web solutions.",
     siteName: "0xDrew"
   },
   twitter: {
     card: "summary_large_image",
-    title: "0xDrew | Designer & Developer",
-    description: "Designer & Developer with 6+ years experience transforming complex challenges into elegant, user-focused web solutions.",
+    title: "0xDrew | Product Guy, Designer & Developer",
+    description: "Product Guy, Designer & Developer with 6+ years experience transforming complex challenges into elegant, user-focused web solutions.",
     creator: "@0xdrew"
   },
 };
