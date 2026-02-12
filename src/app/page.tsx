@@ -23,10 +23,10 @@ export default async function Home() {
         className='object-cover object-top rounded-full flex-shrink-0'
       />
       <Heading className='mt-6 lg:text-[42px] lg:leading-[110%]'>
-        Hey, I&apos;m Andrew.
+        Hey, I&apos;m Andrew Akyampong.
       </Heading>
       <Heading className='lg:text-[42px] lg:leading-[110%]'>
-        Designer & Developer, All round Product Guy
+        Designer & Developer
       </Heading>
       <Paragraph className='max-w-xl mt-4'>
         Leveraging 6+ years across both{' '}
