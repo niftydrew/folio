@@ -127,7 +127,7 @@ const SidebarHeader = () => {
         className="object-cover object-top rounded-full flex-shrink-0"
       />
       <div className="flex text-sm flex-col">
-        <p className="font-semibold text-neutral-900 dark:text-white text-base">0xDrew</p>
+        <p className="font-semibold text-neutral-900 dark:text-white text-base">Akyampong</p>
         <p className="text-neutral-600 dark:text-neutral-400 text-xs">Designer & Developer</p>
       </div>
     </div>
