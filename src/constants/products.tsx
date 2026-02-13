@@ -122,36 +122,6 @@ export const products = [
     ),
   },
   {
-    href: 'https://scia.ai',
-    title: 'Scia AI',
-    description:
-      'Landing page for an AI agent trading platform that automates market analysis and execution',
-    thumbnail: scia,
-    images: [scia, scia2],
-    githubLink: 'https://github.com/niftydrew/scia-landing',
-    stack: ['Nextjs', 'Tailwindcss'],
-    slug: 'scia',
-    content: (
-      <div>
-        <p>
-          SCIA is a cutting-edge AI agent trading platform designed to
-          revolutionize market analysis and trade execution. The landing page
-          showcases the platform&apos;s ability to analyze market trends,
-          execute trades, and optimize investment strategies without human
-          intervention.
-        </p>
-        <p>
-          Built with Next.js and styled with Tailwind CSS, the website features
-          a modern, professional design that emphasizes the technological
-          sophistication of the platform. The interface presents complex AI
-          trading concepts in an accessible way, using interactive elements and
-          clear information architecture to guide potential users through the
-          platform&apos;s capabilities and benefits.
-        </p>
-      </div>
-    ),
-  },
-  {
     href: 'https://kelvinemmra.com',
     title: 'Kelvin Emmra Portfolio',
     description:
