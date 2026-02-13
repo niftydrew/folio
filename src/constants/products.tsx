@@ -12,8 +12,7 @@ import drew from 'public/images/0xdrew.png';
 import drew2 from 'public/images/0xdrew2.png';
 import polysimplr from 'public/images/polysimplr-dark.png';
 import polysimplr2 from 'public/images/polysimplr-light.png';
-import umbra from 'public/images/umbra.png';
-import umbra2 from 'public/images/umbra2.png';
+
 
 export const products = [
   {
@@ -54,7 +53,7 @@ export const products = [
     ),
   },
   {
-    href: 'https://shonenpump.com',
+    href: 'https://shonenpump.online',
     title: 'Shonen Pump',
     description:
       'Crypto-powered manga reader platform revolutionizing how fans access and support manga creators while fighting industry exploitation.',
@@ -93,36 +92,6 @@ export const products = [
     ),
   },
   {
-    href: 'https://www.umbrastrategy.xyz',
-    title: 'Umbra Strategy',
-    description:
-      'DeFi treasury strategy platform with perpetual token economics, MetaDAO allocations, and deflationary burn mechanisms on Solana.',
-    thumbnail: umbra,
-    images: [umbra, umbra2],
-    stack: ['Web3', 'DeFi', 'Nextjs', 'Tailwindcss', 'Solana', 'Treasury'],
-    slug: 'umbra-strategy',
-    content: (
-      <div>
-        <p>
-          Umbra Strategy is an innovative DeFi platform built on Solana that
-          implements a self-reinforcing perpetual cycle: Trade → Fund → Reward →
-          Burn → Repeat. The platform manages treasury positions and distributes
-          MetaDAO allocations to $UMBSTRAT token holders based on their score,
-          creating a sustainable ecosystem that rewards long-term holders.
-        </p>
-        <p>
-          What sets Umbra apart is its unique deflationary mechanism where users
-          burn 10% of the USD value in $UMBSTRAT tokens to claim their MetaDAO
-          allocations, creating continuous buying pressure and scarcity. The
-          platform features real-time treasury tracking, transparent position
-          management, and a scoring system that determines allocation shares.
-          Built with Next.js and integrated with Solana blockchain, it
-          exemplifies modern Web3 UX with sophisticated tokenomics.
-        </p>
-      </div>
-    ),
-  },
-  {
     href: 'https://web3accelerators.com',
     title: 'Web3 Accelerators',
     description:
@@ -152,34 +121,6 @@ export const products = [
       </div>
     ),
   },
-  {
-    href: 'https://0xdrew.com',
-    title: '0xDrew Portfolio',
-    description:
-      'Portfolio website for a Web3 marketing professional showcasing services and expertise in blockchain promotion.',
-    thumbnail: drew,
-    images: [drew, drew2],
-    githubLink: 'https://github.com/niftydrew/folio',
-    stack: ['Nextjs', 'Tailwindcss'],
-    slug: '0xdrew-portfolio',
-    content: (
-      <div>
-        <p>
-          The 0xDrew Portfolio website was designed as a modern
-          developer-designer dashboard that effectively showcases my projects
-          and technical capabilities. The minimalist interface draws inspiration
-          from professional development environments while incorporating subtle
-          interactive elements that demonstrate my design sensibilities.
-        </p>
-        <p>
-          This responsive portfolio features a dashboard-style layout with
-          intuitive navigation and a clean, modern design that emphasizes
-          functionality and accessibility.
-        </p>
-      </div>
-    ),
-  },
-
   {
     href: 'https://scia.ai',
     title: 'Scia AI',
@@ -236,36 +177,6 @@ export const products = [
           achievements in the blockchain space, with particular attention to
           loading performance and mobile responsiveness to ensure accessibility
           across all devices.
-        </p>
-      </div>
-    ),
-  },
-  {
-    href: 'https://holders.web3accelerators.com',
-    title: 'Holders Picker',
-    description:
-      'A tool for selecting random holders from a token&apos;s holders list.',
-    thumbnail: holderspicker,
-    images: [holderspicker, holderspicker2],
-    githubLink: 'https://github.com/niftydrew/token-holders-picker',
-    stack: ['Nextjs', 'Web3', 'Solana'],
-    slug: 'holders-picker',
-    content: (
-      <div>
-        <p>
-          Holders Picker is a specialized web application designed for Solana
-          ecosystem participants to analyze token holder distributions and
-          conduct fair, verifiable random selections. The tool addresses a
-          common challenge in the Web3 space: transparently selecting token
-          holders for airdrops, rewards, and community initiatives.
-        </p>
-        <p>
-          Built with Next.js and integrated with Solana&apos;s blockchain,
-          Holders Picker allows users to define minimum holdings, among other
-          filters. It queries the blockchain to check holders that fit criteria
-          and select random number of those holders as defined by the user. The
-          application is designed for teams conducting airdrops, giveaways, or
-          community rewards on the Solana network.
         </p>
       </div>
     ),
