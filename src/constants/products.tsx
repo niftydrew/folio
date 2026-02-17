@@ -2,19 +2,53 @@ import web3accelerators from 'public/images/web3accelerators.png';
 import web3accelerators2 from 'public/images/web3accelerators2.png';
 import holderspicker from 'public/images/holderspicker.png';
 import holderspicker2 from 'public/images/holderspicker2.png';
-import scia from 'public/images/scia.png';
-import scia2 from 'public/images/scia2.png';
 import kelvin from 'public/images/kelvin.png';
 import kelvin2 from 'public/images/kelvin2.png';
 import shonen from 'public/images/shonen.png';
 import shonen2 from 'public/images/shonen2.png';
-import drew from 'public/images/0xdrew.png';
-import drew2 from 'public/images/0xdrew2.png';
 import polysimplr from 'public/images/polysimplr-dark.png';
 import polysimplr2 from 'public/images/polysimplr-light.png';
+import kredentic from 'public/images/kredentic.png';
+import kredentic2 from 'public/images/kredentic2.png';
 
 
 export const products = [
+  {
+    href: 'https://www.kredentic.com',
+    title: 'Kredentic',
+    description:
+      'Automatically detect and remove fake Google Business listings that impersonate your brand—before customers get scammed.',
+    thumbnail: kredentic,
+    images: [kredentic, kredentic2],
+    stack: ['AI', 'Nextjs', 'Tailwindcss', 'Bun', 'Python', 'PostgreSQL', 'Maps API', 'Redis'],
+    slug: 'kredentic',
+    content: (
+      <div>
+        <p>
+          Automatically detect and remove fake Google Business listings that
+          impersonate your brand—before customers get scammed. Kredentic helps
+          businesses protect customers from scammers who create fake Google
+          listings that copy a brand name and replace the real phone number.
+          When customers call, they think they&apos;re reaching you—but can end up
+          paying fraudsters instead. You add your verified business details
+          once, and Kredentic continuously scans for impersonation in the
+          background, classifies risk, and drives the workflow from detection to
+          evidence to takedown—keeping a clear outcome for each case (resolved,
+          under review, or action needed) and a complete audit trail for your
+          team.
+        </p>
+        <p>
+          The design focuses on simplicity without sacrificing functionality,
+          providing real-time market intelligence and AI-powered analysis that
+          helps users make informed decisions. With features tailored for both
+          beginners and experienced traders, Polysimplr bridges the gap between
+          complex prediction market mechanics and user-friendly accessibility,
+          making it easier to navigate and succeed in the prediction market
+          ecosystem.
+        </p>
+      </div>
+    ),
+  },
   {
     href: 'https://www.polysimplr.com',
     title: 'Polysimplr',
