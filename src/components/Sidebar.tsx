@@ -10,7 +10,7 @@ import { twMerge } from 'tailwind-merge';
 import { Heading } from './Heading';
 import { socials } from '@/constants/socials';
 import { Button } from './Button';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { IconLayoutSidebarRightCollapse } from '@tabler/icons-react';
 import { isMobile } from '@/lib/utils';
 

@@ -5,13 +5,13 @@ import React, { useState } from 'react';
 import { Heading } from './Heading';
 import { Paragraph } from './Paragraph';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Button } from './Button';
 import { RiGithubFill } from 'react-icons/ri';
 
 export const SingleProduct = ({ product }: { product: Product }) => {
   const [activeImage, setActiveImage] = useState<StaticImageData | string>(
-    product.thumbnail
+    product.thumbnail,
   );
   return (
     <div className='py-10'>

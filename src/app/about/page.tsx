@@ -1,25 +1,27 @@
-import { Container } from "@/components/Container";
-import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
-import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
-import { Metadata } from "next";
-import Image from "next/image";
+import { Container } from '@/components/Container';
+import { Heading } from '@/components/Heading';
+import { Highlight } from '@/components/Highlight';
+import { Paragraph } from '@/components/Paragraph';
+import { Products } from '@/components/Products';
+import { Metadata } from 'next';
+import Image from 'next/image';
 
-import { motion } from "framer-motion";
-import About from "@/components/About";
+import { motion } from 'motion/react';
+import About from '@/components/About';
 
 export const metadata: Metadata = {
-  title: "About | Andrew Akyampong",
+  title: 'About | Andrew Akyampong',
   description:
-    "Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience creating elegant, user-focused web solutions.",
+    'Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience creating elegant, user-focused web solutions.',
   openGraph: {
-    title: "About | Andrew Akyampong",
-    description: "Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience.",
+    title: 'About | Andrew Akyampong',
+    description:
+      'Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience.',
   },
   twitter: {
-    title: "About | Andrew Akyampong",
-    description: "Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience.",
+    title: 'About | Andrew Akyampong',
+    description:
+      'Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience.',
   },
 };
 

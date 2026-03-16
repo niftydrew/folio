@@ -1,8 +1,14 @@
-"use client";
-import React, { createContext, useContext, useState, useEffect } from 'react';
+'use client';
+import React, {
+  Suspense,
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+} from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { Loader } from '@/components/ui/loader';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 type LoadingContextType = {
   isLoading: boolean;
@@ -11,7 +17,7 @@ type LoadingContextType = {
 
 const LoadingContext = createContext<LoadingContextType | undefined>(undefined);
 
-export function LoadingProvider({ children }: { children: React.ReactNode }) {
+function LoadingProviderInner({ children }: { children: React.ReactNode }) {
   const [isLoading, setLoading] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
   const pathname = usePathname();
@@ -41,22 +47,30 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <LoadingContext.Provider value={{ isLoading, setLoading }}>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode='wait'>
         {isLoading && (
           <motion.div
-            key="loader"
+            key='loader'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm"
+            className='fixed inset-0 z-50 flex items-center justify-center bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm'
           >
-            <Loader size="lg" />
+            <Loader size='lg' />
           </motion.div>
         )}
       </AnimatePresence>
       {children}
     </LoadingContext.Provider>
+  );
+}
+
+export function LoadingProvider({ children }: { children: React.ReactNode }) {
+  return (
+    <Suspense>
+      <LoadingProviderInner>{children}</LoadingProviderInner>
+    </Suspense>
   );
 }
 
