@@ -1,18 +1,18 @@
-"use client";
-import { navlinks } from "@/constants/navlinks";
-import { Navlink } from "@/types/navlink";
-import { Socials } from "@/types/socials";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
-import React, { useState } from "react";
-import { twMerge } from "tailwind-merge";
-import { Heading } from "./Heading";
-import { socials } from "@/constants/socials";
-import { Button } from "./Button";
-import { AnimatePresence, motion } from "framer-motion";
-import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
-import { isMobile } from "@/lib/utils";
+'use client';
+import { navlinks } from '@/constants/navlinks';
+import { Navlink } from '@/types/navlink';
+import { Socials } from '@/types/socials';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
+import React, { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+import { Heading } from './Heading';
+import { socials } from '@/constants/socials';
+import { Button } from './Button';
+import { AnimatePresence, motion } from 'framer-motion';
+import { IconLayoutSidebarRightCollapse } from '@tabler/icons-react';
+import { isMobile } from '@/lib/utils';
 
 export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
@@ -34,7 +34,7 @@ export const Sidebar = () => {
             </div>
             <div onClick={() => isMobile() && setOpen(false)}>
               <Button
-                href='https://calendly.com/0x-drew/general-meeting'
+                href='https://calendly.com/akyampong/general-meeting'
                 text='Schedule a Call'
                 target='_blank'
               />
@@ -45,7 +45,7 @@ export const Sidebar = () => {
       <button
         className='fixed lg:hidden bottom-4 right-4 h-10 w-10 border-2 border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 rounded-full shadow-lg flex items-center justify-center z-50 hover:scale-105 transition-transform'
         onClick={() => setOpen(!open)}
-        aria-label="Toggle sidebar"
+        aria-label='Toggle sidebar'
       >
         <IconLayoutSidebarRightCollapse className='h-5 w-5 text-neutral-800 dark:text-white' />
       </button>
@@ -63,50 +63,54 @@ export const Navigation = ({
   const isActive = (href: string) => pathname === href;
 
   return (
-    <div className="flex flex-col space-y-1 my-10 relative z-[100]">
+    <div className='flex flex-col space-y-1 my-10 relative z-[100]'>
       {navlinks.map((link: Navlink) => (
         <Link
           key={link.href}
           href={link.href}
           onClick={() => isMobile() && setOpen(false)}
           className={twMerge(
-            "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
-            isActive(link.href) && "bg-white dark:bg-neutral-800 shadow-md text-neutral-900 dark:text-white font-medium"
+            'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm',
+            isActive(link.href) &&
+              'bg-white dark:bg-neutral-800 shadow-md text-neutral-900 dark:text-white font-medium',
           )}
         >
           <link.icon
             className={twMerge(
-              "h-4 w-4 flex-shrink-0 text-neutral-500 dark:text-neutral-400",
-              isActive(link.href) && "hidden"
+              'h-4 w-4 flex-shrink-0 text-neutral-500 dark:text-neutral-400',
+              isActive(link.href) && 'hidden',
             )}
           />
           <link.iconfill
             className={twMerge(
-              "h-4 w-4 flex-shrink-0 hidden",
-              isActive(link.href) && "block text-neutral-900 dark:text-white"
+              'h-4 w-4 flex-shrink-0 hidden',
+              isActive(link.href) && 'block text-neutral-900 dark:text-white',
             )}
           />
           <span>{link.label}</span>
         </Link>
       ))}
 
-      <Heading as="p" className="text-sm md:text-sm lg:text-sm pt-10 px-2">
+      <Heading
+        as='p'
+        className='text-sm md:text-sm lg:text-sm pt-10 px-2'
+      >
         Socials
       </Heading>
       {socials.map((social: Socials) => (
         <Link
           key={social.href}
           href={social.href}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           className={twMerge(
-            "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
+            'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm',
           )}
         >
           <social.icon
             className={twMerge(
               `h-${social.height} w-${social.width} flex-shrink-0`,
-              isActive(social.href) && "text-primary"
+              isActive(social.href) && 'text-primary',
             )}
           />
           <span>{social.label}</span>
@@ -118,17 +122,21 @@ export const Navigation = ({
 
 const SidebarHeader = () => {
   return (
-    <div className="flex space-x-2">
+    <div className='flex space-x-2'>
       <Image
-        src="/profile/pfp.png"
-        alt="Avatar"
-        height="40"
-        width="40"
-        className="object-cover object-top rounded-full flex-shrink-0"
+        src='/profile/pfp.png'
+        alt='Avatar'
+        height='40'
+        width='40'
+        className='object-cover object-top rounded-full flex-shrink-0'
       />
-      <div className="flex text-sm flex-col">
-        <p className="font-semibold text-neutral-900 dark:text-white text-base">Akyampong</p>
-        <p className="text-neutral-600 dark:text-neutral-400 text-xs">Designer & Developer</p>
+      <div className='flex text-sm flex-col'>
+        <p className='font-semibold text-neutral-900 dark:text-white text-base'>
+          Akyampong
+        </p>
+        <p className='text-neutral-600 dark:text-neutral-400 text-xs'>
+          Designer & Developer
+        </p>
       </div>
     </div>
   );
