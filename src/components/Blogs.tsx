@@ -1,16 +1,16 @@
-"use client";
-import { Blog } from "@/types/blog";
-import Image from "next/image";
-import React, { useState } from "react";
-import { Heading } from "./Heading";
-import { Paragraph } from "./Paragraph";
-import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
+'use client';
+import { Blog } from '@/types/blog';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { Heading } from './Heading';
+import { Paragraph } from './Paragraph';
+import { AnimatePresence, motion } from 'motion/react';
+import Link from 'next/link';
 
 export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
   const [hovered, setHovered] = useState<string | null>(null);
   return (
-    <div className="max-w-5xl mx-auto my-10">
+    <div className='max-w-5xl mx-auto my-10'>
       {blogs.map((blog, index) => (
         <motion.div
           key={blog.slug}
@@ -27,11 +27,11 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
           <Link
             key={`blog-${blog.title}`}
             href={`/blog/${blog.slug}`}
-            className="relative my-10 block"
+            className='relative my-10 block'
             onMouseEnter={() => setHovered(blog.slug)}
             onMouseLeave={() => setHovered(null)}
           >
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode='wait'>
               {hovered === blog.slug && (
                 <motion.div
                   initial={{
@@ -50,31 +50,31 @@ export const Blogs = ({ blogs }: { blogs: Blog[] }) => {
                     scaleX: 0.95,
                     scaleY: 0.95,
                   }}
-                  className="absolute z-0 pointer-events-none bg-gray-50 dark:bg-neutral-800/50 inset-0 h-full w-full rounded-md"
+                  className='absolute z-0 pointer-events-none bg-gray-50 dark:bg-neutral-800/50 inset-0 h-full w-full rounded-md'
                 />
               )}
             </AnimatePresence>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative z-20">
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-4 relative z-20'>
               <Image
                 src={blog.image}
-                alt="thumbnail"
-                height="200"
-                width="200"
-                objectFit="cover"
-                className="rounded-md object-cover h-40 w-60"
+                alt='thumbnail'
+                height='200'
+                width='200'
+                objectFit='cover'
+                className='rounded-md object-cover h-40 w-60'
               />
-              <div className="flex flex-col col-span-3">
-                <Heading className="text-lg md:text-lg lg:text-lg">
+              <div className='flex flex-col col-span-3'>
+                <Heading className='text-lg md:text-lg lg:text-lg'>
                   {blog.title}
                 </Heading>
-                <Paragraph className="text-sm md:text-sm lg:text-sm mt-2">
+                <Paragraph className='text-sm md:text-sm lg:text-sm mt-2'>
                   {blog.description}
                 </Paragraph>
-                <div className="flex space-x-2 flex-wrap mt-4">
+                <div className='flex space-x-2 flex-wrap mt-4'>
                   {blog.tags?.map((tag, index) => (
                     <span
                       key={`tag-${blog.slug}`}
-                      className="text-xs px-1 py-0.5 text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-md"
+                      className='text-xs px-1 py-0.5 text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 rounded-md'
                     >
                       {tag}
                     </span>

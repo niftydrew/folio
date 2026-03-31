@@ -1,9 +1,9 @@
-import { TablerIconsProps } from "@tabler/icons-react";
+import { type IconProps } from '@tabler/icons-react';
 
 export type Socials = {
   href: string;
   label: string;
-  icon?: React.ReactNode | TablerIconsProps | any;
+  icon?: React.ReactNode | IconProps | any;
   height?: number;
   width?: number;
 };

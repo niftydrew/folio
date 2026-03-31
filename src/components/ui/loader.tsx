@@ -1,6 +1,6 @@
-"use client";
+'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 
 type LoaderProps = {
@@ -32,19 +32,19 @@ export function Loader({ size = 'md', className }: LoaderProps) {
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
-            initial="initial"
-            animate="animate"
+            initial='initial'
+            animate='animate'
             variants={dotVariants}
             transition={{
               repeat: Infinity,
               repeatType: 'reverse',
               duration: 0.6,
               delay: i * 0.15,
-              ease: "easeInOut"
+              ease: 'easeInOut',
             }}
             className={cn(
               'rounded-full bg-neutral-400 dark:bg-neutral-500',
-              dotSizeMap[size]
+              dotSizeMap[size],
             )}
           />
         ))}

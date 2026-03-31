@@ -1,6 +1,6 @@
-"use client";
+'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Link from 'next/link';
 
 type ButtonProps = {
@@ -8,7 +8,7 @@ type ButtonProps = {
   onClick?: () => void;
   href?: string;
   target?: string;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   className?: string;
   disabled?: boolean;
 };
@@ -18,12 +18,13 @@ export const Button = ({
   onClick,
   href,
   target,
-  type = "button",
+  type = 'button',
   className,
   disabled = false,
 }: ButtonProps) => {
-  const baseStyles = 'bg-neutral-950 dark:bg-neutral-800 no-underline group cursor-pointer relative shadow-lg shadow-neutral-300/20 dark:shadow-neutral-900/30 rounded-full p-px text-sm font-medium leading-6 tracking-tight text-white inline-block';
-  
+  const baseStyles =
+    'bg-neutral-950 dark:bg-neutral-800 no-underline group cursor-pointer relative shadow-lg shadow-neutral-300/20 dark:shadow-neutral-900/30 rounded-full p-px text-sm font-medium leading-6 tracking-tight text-white inline-block';
+
   // If href is provided, render as Link
   if (href) {
     return (
