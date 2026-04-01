@@ -1,8 +1,6 @@
 import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
-import { Projects } from "@/components/Projects";
 import { getAllBlogs } from "../../../lib/getAllBlogs";
 import { Blogs } from "@/components/Blogs";
 import { Metadata } from "next";
@@ -23,7 +21,6 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
   const blogs = await getAllBlogs();
-  const data = blogs.map(({ component, ...meta }) => meta);
 
   return (
     <Container>
@@ -32,7 +29,7 @@ export default async function Blog() {
         Articles about web development, design, and technology. I share my
         knowledge and insights on various topics, from front-end development to user experience, crypto, and AI.
       </Paragraph>
-      <Blogs blogs={data} />
+      <Blogs blogs={blogs as any} />
     </Container>
   );
 }

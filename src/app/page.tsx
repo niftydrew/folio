@@ -12,7 +12,6 @@ import { getAllBlogs } from '../../lib/getAllBlogs';
 
 export default async function Home() {
   const blogs = await getAllBlogs();
-  const blogData = blogs.map(({ component, ...meta }) => meta);
   return (
     <Container>
       <Image
@@ -50,7 +49,7 @@ export default async function Home() {
       >
         Latest articles
       </Heading>
-      <BlogsPreview blogs={blogData} limit={3} />
+      <BlogsPreview blogs={blogs as any} limit={3} />
 
       <TestimonialCloud />
       <TechStack />
