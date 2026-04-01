@@ -1,16 +1,10 @@
-import { BlogLayout } from '@/components/BlogLayout';
-
-export const meta = {
-  date: '2026-03-31',
-  title: 'The Agent Economy: How AI and Blockchain Are Building a New Financial Layer',
-  description: 'AI agents are no longer assistants. They hold wallets, execute trades, pay APIs, and negotiate with other agents autonomously. Here is what that actually looks like in production — and why it changes how we build software.',
-  image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1632&auto=format&fit=crop',
-  tags: ['AI Agents', 'Web3', 'Blockchain'],
-};
-
-export default (props) => (
-  <BlogLayout meta={meta} {...props} />
-);
+---
+date: '2026-03-31'
+title: 'The Agent Economy: How AI and Blockchain Are Building a New Financial Layer'
+description: 'AI agents are no longer assistants. They hold wallets, execute trades, pay APIs, and negotiate with other agents autonomously. Here is what that actually looks like in production — and why it changes how we build software.'
+image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1632&auto=format&fit=crop'
+tags: ['AI Agents', 'Web3', 'Blockchain']
+---
 
 For most of the internet's history, a transaction required a human in the loop. Someone had to click a button, enter a card number, authorize a payment. That constraint shaped everything: API pricing, subscription models, paywalls, the entire economics of digital services.
 
