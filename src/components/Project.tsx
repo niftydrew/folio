@@ -1,5 +1,5 @@
 'use client';
-import { Product } from '@/types/products';
+import { Project } from '@/types/projects';
 import Image, { StaticImageData } from 'next/image';
 import React, { useState } from 'react';
 import { Heading } from './Heading';
@@ -9,9 +9,9 @@ import { motion } from 'motion/react';
 import { Button } from './Button';
 import { RiGithubFill } from 'react-icons/ri';
 
-export const SingleProduct = ({ product }: { product: Product }) => {
+export const SingleProject = ({ project, hasCaseStudy }: { project: Project; hasCaseStudy?: boolean }) => {
   const [activeImage, setActiveImage] = useState<StaticImageData | string>(
-    product.thumbnail,
+    project.thumbnail,
   );
   return (
     <div className='py-10'>
@@ -27,7 +27,7 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         transition={{
           duration: 0.5,
         }}
-        key={product.slug}
+        key={project.slug}
         className='relative'
       >
         <Image
@@ -40,14 +40,14 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         <div className='absolute bottom-0 bg-white dark:bg-neutral-900 h-40 w-full [mask-image:linear-gradient(to_bottom,transparent,white)]' />
       </motion.div>
       <div className='flex flex-row justify-center my-8 flex-wrap'>
-        {product.images.map((image, idx) => (
+        {project.images.map((image, idx) => (
           <button
             onClick={() => setActiveImage(image)}
             key={`image-thumbnail-${idx}`}
           >
             <Image
               src={image}
-              alt='product thumbnail'
+              alt='project thumbnail'
               height='1000'
               width='1000'
               className='h-14 w-16 md:h-fit md:w-60 object-contain object-top mr-4 mb-r border rounded-lg border-neutral-100 dark:border-neutral-700'
@@ -56,9 +56,9 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         ))}
       </div>
       <div className='flex lg:flex-row justify-between items-center flex-col mt-20'>
-        <Heading className='font-semibold mb-2 pb-1'> {product.title}</Heading>
+        <Heading className='font-semibold mb-2 pb-1'> {project.title}</Heading>
         <div className='flex space-x-2 md:mb-1 mt-2 md:mt-0'>
-          {product.stack?.map((stack: string) => (
+          {project.stack?.map((stack: string) => (
             <span
               key={stack}
               className='text-xs md:text-xs lg:text-xs bg-gray-50 dark:bg-neutral-800 px-2 py-1 rounded-sm text-neutral-600 dark:text-neutral-300'
@@ -69,21 +69,28 @@ export const SingleProduct = ({ product }: { product: Product }) => {
         </div>
       </div>
       <div>
-        <Paragraph className='max-w-xl mt-4'>{product.description}</Paragraph>
+        <Paragraph className='max-w-none mt-4'>{project.description}</Paragraph>
       </div>
       <div className='prose prose-sm md:prose-base max-w-none text-neutral-600 dark:text-neutral-300'>
-        {product?.content}
+        {project?.content}
       </div>
 
-      <div className='flex gap-4 mt-8'>
+      <div className='flex gap-4 mt-8 flex-wrap'>
         <Button
           text='Live Preview'
-          href={product.href}
+          href={project.href}
           target='_blank'
         />
-        {product.githubLink && (
+        {hasCaseStudy && (
+          <Button
+            text='Read Case Study'
+            href={`/projects/${project.slug}/case-study`}
+            variant='secondary'
+          />
+        )}
+        {project.githubLink && (
           <Link
-            href={product.githubLink}
+            href={project.githubLink}
             target='_blank'
             className='bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 no-underline group cursor-pointer relative shadow-lg shadow-neutral-300/20 dark:shadow-neutral-900/30 rounded-full p-px text-sm font-medium leading-6 tracking-tight text-white inline-block'
           >

@@ -11,6 +11,7 @@ type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   className?: string;
   disabled?: boolean;
+  variant?: 'primary' | 'secondary';
 };
 
 export const Button = ({
@@ -21,9 +22,12 @@ export const Button = ({
   type = 'button',
   className,
   disabled = false,
+  variant = 'primary',
 }: ButtonProps) => {
   const baseStyles =
-    'bg-neutral-950 dark:bg-neutral-800 no-underline group cursor-pointer relative shadow-lg shadow-neutral-300/20 dark:shadow-neutral-900/30 rounded-full p-px text-sm font-medium leading-6 tracking-tight text-white inline-block';
+    variant === 'secondary'
+      ? 'no-underline group cursor-pointer relative rounded-full p-px text-sm font-medium leading-6 tracking-tight inline-block border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:border-neutral-500 dark:hover:border-neutral-500 transition-colors'
+      : 'bg-neutral-950 dark:bg-neutral-800 no-underline group cursor-pointer relative shadow-lg shadow-neutral-300/20 dark:shadow-neutral-900/30 rounded-full p-px text-sm font-medium leading-6 tracking-tight text-white inline-block';
 
   // If href is provided, render as Link
   if (href) {
@@ -33,9 +37,11 @@ export const Button = ({
         target={target}
         className={`${baseStyles} ${className || ''}`}
       >
-        <span className='absolute inset-0 overflow-hidden rounded-full'>
-          <span className='absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(100,100,100,0.6)_0%,rgba(56,189,248,0)_75%)] dark:bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(150,150,150,0.4)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100'></span>
-        </span>
+        {variant === 'primary' && (
+          <span className='absolute inset-0 overflow-hidden rounded-full'>
+            <span className='absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(100,100,100,0.6)_0%,rgba(56,189,248,0)_75%)] dark:bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(150,150,150,0.4)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100'></span>
+          </span>
+        )}
         <div className='relative flex items-center z-10 rounded-full bg-transparent py-1.5 pl-4 pr-3 ring-1 ring-white/20 dark:ring-white/10'>
           <span>{text}</span>
           <svg
@@ -69,9 +75,11 @@ export const Button = ({
       disabled={disabled}
       className={`${baseStyles} ${className || ''} ${disabled ? 'opacity-60 cursor-not-allowed' : ''}`}
     >
-      <span className='absolute inset-0 overflow-hidden rounded-full'>
-        <span className='absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(100,100,100,0.6)_0%,rgba(56,189,248,0)_75%)] dark:bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(150,150,150,0.4)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100'></span>
-      </span>
+      {variant === 'primary' && (
+        <span className='absolute inset-0 overflow-hidden rounded-full'>
+          <span className='absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(100,100,100,0.6)_0%,rgba(56,189,248,0)_75%)] dark:bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(150,150,150,0.4)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100'></span>
+        </span>
+      )}
       <div className='relative flex items-center z-10 rounded-full bg-transparent py-1.5 pl-4 pr-3 ring-1 ring-white/20 dark:ring-white/10'>
         <span>{text}</span>
         <svg

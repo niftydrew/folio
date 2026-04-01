@@ -1,26 +1,26 @@
 'use client';
 import React from 'react';
 import { Heading } from './Heading';
-import { Product } from '@/types/products';
-import { products } from '@/constants/products';
+import { Project } from '@/types/projects';
+import { projects } from '@/constants/projects';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Paragraph } from './Paragraph';
 import { motion } from 'motion/react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
-interface ProductsProps {
+interface ProjectsProps {
   limit?: number;
 }
 
-export const Products = ({ limit }: ProductsProps = {}) => {
-  const displayProducts = limit ? products.slice(0, limit) : products;
+export const Projects = ({ limit }: ProjectsProps = {}) => {
+  const displayProjects = limit ? projects.slice(0, limit) : projects;
   return (
     <div>
       <div className='grid grid-cols-1  gap-10'>
-        {displayProducts.map((product: Product, idx: number) => (
+        {displayProjects.map((project: Project, idx: number) => (
           <motion.div
-            key={product.href}
+            key={project.href}
             initial={{
               opacity: 0,
               x: -50,
@@ -32,12 +32,12 @@ export const Products = ({ limit }: ProductsProps = {}) => {
             transition={{ duration: 0.2, delay: idx * 0.1 }}
           >
             <Link
-              href={product.slug ? `/projects/${product.slug}` : product.href}
-              key={product.href}
+              href={project.slug ? `/projects/${project.slug}` : project.href}
+              key={project.href}
               className='group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 dark:hover:bg-neutral-800/50 rounded-2xl transition duration-200 pt-4'
             >
               <Image
-                src={product.thumbnail}
+                src={project.thumbnail}
                 alt='thumbnail'
                 height='200'
                 width='200'
@@ -49,14 +49,14 @@ export const Products = ({ limit }: ProductsProps = {}) => {
                     as='h4'
                     className='font-medium text-lg md:text-lg lg:text-lg '
                   >
-                    {product.title}
+                    {project.title}
                   </Heading>
-                  <Paragraph className='text-sm md:text-sm lg:text-base mt-2 max-w-xl'>
-                    {product.description}
+                  <Paragraph className='text-sm md:text-sm lg:text-base mt-2 max-w-xl line-clamp-2'>
+                    {project.description}
                   </Paragraph>
                 </div>
                 <div className='flex space-x-2 md:mb-1 mt-2 md:mt-0'>
-                  {product.stack?.map((stack: string) => (
+                  {project.stack?.map((stack: string) => (
                     <span
                       key={stack}
                       className='text-xs md:text-xs lg:text-xs bg-gray-50 dark:bg-neutral-800 px-2 py-1 rounded-sm text-neutral-600 dark:text-neutral-300'
@@ -71,7 +71,7 @@ export const Products = ({ limit }: ProductsProps = {}) => {
         ))}
       </div>
 
-      {limit && products.length > limit && (
+      {limit && projects.length > limit && (
         <div className='mt-8'>
           <Link
             href='/projects'

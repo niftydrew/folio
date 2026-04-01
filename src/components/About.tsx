@@ -40,7 +40,7 @@ export default function About() {
 
       <div className='max-w-4xl'>
         <Paragraph className=' mt-4'>
-          Hey there, I&apos;m 0xDrew - a designer and developer with over 6
+          Hey there, I&apos;m Akyampong - a designer and developer with over 6
           years of experience crafting elegant, user-focused web solutions.
           Welcome to my portfolio!
         </Paragraph>

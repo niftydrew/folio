@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import React from 'react';
 
-export type Product = {
+export type Project = {
   title: string;
   description: string;
   thumbnail: StaticImageData;

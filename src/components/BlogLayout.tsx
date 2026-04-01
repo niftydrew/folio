@@ -1,9 +1,5 @@
-"use client";
-import Head from "next/head";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { formatDate } from "../../lib/formatDate";
-import { Prose } from "@/components/Prose";
 import { Container } from "./Container";
 import { Heading } from "./Heading";
 import Link from "next/link";
@@ -25,11 +21,7 @@ function ArrowLeftIcon(props: any) {
 export function BlogLayout({
   children,
   meta,
-  isRssFeed = false,
-  previousPathname,
 }: any) {
-  let router = useRouter();
-
   return (
     <Container>
       <article>
@@ -62,7 +54,7 @@ export function BlogLayout({
             />
           </div>
         </header>
-        <Prose className="mt-8">{children}</Prose>
+        <div className="mt-8">{children}</div>
       </article>
     </Container>
   );

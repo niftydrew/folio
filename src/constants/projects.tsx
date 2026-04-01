@@ -1,7 +1,5 @@
 import web3accelerators from '../../public/images/web3accelerators.png';
 import web3accelerators2 from '../../public/images/web3accelerators2.png';
-import holderspicker from '../../public/images/holderspicker.png';
-import holderspicker2 from '../../public/images/holderspicker2.png';
 import kelvin from '../../public/images/kelvin.png';
 import kelvin2 from '../../public/images/kelvin2.png';
 import shonen from '../../public/images/shonen.png';
@@ -11,48 +9,43 @@ import polysimplr2 from '../../public/images/polysimplr-light.png';
 import kredentic from '../../public/images/kredentic.png';
 import kredentic2 from '../../public/images/kredentic2.png';
 
-export const products = [
+export const projects = [
   {
     href: 'https://www.kredentic.com',
     title: 'Kredentic',
     description:
-      'Automatically detect and remove fake Google Business listings that impersonate your brand—before customers get scammed.',
+      'B2B SaaS that monitors Google Maps 24/7 for fake listings impersonating real businesses. Built for the Ghanaian market, where phone-swap scams on Maps are an active and growing problem.',
     thumbnail: kredentic,
     images: [kredentic, kredentic2],
     stack: [
-      'AI',
-      'Nextjs',
-      'Tailwindcss',
-      'Bun',
+      'Next.js 15',
       'Python',
-      'PostgreSQL',
-      'Maps API',
-      'Redis',
+      'Supabase',
+      'Playwright',
+      'RapidFuzz',
+      'TypeScript',
     ],
     slug: 'kredentic',
     content: (
       <div>
         <p>
-          Automatically detect and remove fake Google Business listings that
-          impersonate your brand—before customers get scammed. Kredentic helps
-          businesses protect customers from scammers who create fake Google
-          listings that copy a brand name and replace the real phone number.
-          When customers call, they think they&apos;re reaching you—but can end
-          up paying fraudsters instead. You add your verified business details
-          once, and Kredentic continuously scans for impersonation in the
-          background, classifies risk, and drives the workflow from detection to
-          evidence to takedown—keeping a clear outcome for each case (resolved,
-          under review, or action needed) and a complete audit trail for your
-          team.
+          The scam is straightforward: copy a real business name and address
+          onto a Google Maps listing, swap in a fraudulent phone number, and
+          wait for customers to call. Kredentic automates the monitoring side of
+          that problem. A Python detection engine scans Maps listings across 22
+          Ghanaian districts and scores each result for fraud likelihood using
+          three signals: phone number mismatches carry 70 points, name
+          similarity via RapidFuzz fuzzy matching adds 20, and a missing
+          verification badge adds 10. Anything above 80 opens an incident.
         </p>
         <p>
-          The design focuses on simplicity without sacrificing functionality,
-          providing real-time market intelligence and AI-powered analysis that
-          helps users make informed decisions. With features tailored for both
-          beginners and experienced traders, Polysimplr bridges the gap between
-          complex prediction market mechanics and user-friendly accessibility,
-          making it easier to navigate and succeed in the prediction market
-          ecosystem.
+          When a listing triggers, Playwright spins up a headless browser,
+          navigates to the Maps page, and captures a full screenshot before
+          anything can change. That screenshot goes to Supabase Storage and the
+          URL gets sent to the business owner over WhatsApp via Twilio. The
+          Next.js dashboard tracks every incident through a defined lifecycle
+          from detection to takedown, with Supabase Realtime keeping the UI
+          current without polling.
         </p>
       </div>
     ),
@@ -61,35 +54,39 @@ export const products = [
     href: 'https://www.polysimplr.com',
     title: 'Polysimplr',
     description:
-      'AI-powered platform designed to make prediction markets accessible with simplified interfaces, real-time market intelligence, and smart trading insights.',
+      'Full-stack web app layered on top of Polymarket that makes prediction markets usable for people outside of crypto. AI chat assistant, live event browsing, and watchlists. 544 users, zero paid acquisition.',
     thumbnail: polysimplr,
     images: [polysimplr, polysimplr2],
     stack: [
-      'AI',
-      'Nextjs',
-      'Tailwindcss',
-      'Bun',
-      'Nestjs',
-      'Prediction Markets',
+      'Next.js 15',
+      'NestJS',
+      'PostgreSQL',
+      'Redis',
+      'OpenAI',
+      'Privy',
+      'TypeScript',
+      'Docker',
     ],
     slug: 'polysimplr',
     content: (
       <div>
         <p>
-          Polysimplr is an innovative AI-powered platform that democratizes
-          access to prediction markets, making them simpler and more accessible
-          for everyone. The platform combines sophisticated AI-driven insights
-          with an intuitive interface to help users trade smarter in prediction
-          markets like Polymarket.
+          Polymarket has great data but assumes you already know what an
+          orderbook is. Polysimplr sits on top of it and removes that
+          assumption. Users can browse live events, save a watchlist, and ask
+          plain-language questions about any market in a chat panel. The AI
+          pulls fresh search results via Tavily before each response so answers
+          reflect what happened today, not training data. The platform has 544
+          registered users with no paid acquisition.
         </p>
         <p>
-          The design focuses on simplicity without sacrificing functionality,
-          providing real-time market intelligence and AI-powered analysis that
-          helps users make informed decisions. With features tailored for both
-          beginners and experienced traders, Polysimplr bridges the gap between
-          complex prediction market mechanics and user-friendly accessibility,
-          making it easier to navigate and succeed in the prediction market
-          ecosystem.
+          The backend is a modular NestJS API backed by PostgreSQL and Redis.
+          The watchlist service batches all event ID lookups into a single Redis
+          pipeline call so loading a full watchlist never becomes an N+1
+          problem. Auth runs through Privy, which auto-provisions wallets for
+          users who do not have one, so no one hits a MetaMask wall just to
+          browse markets. AI responses stream to the browser over Server-Sent
+          Events with follow-up questions generated via function calling.
         </p>
       </div>
     ),
@@ -98,37 +95,36 @@ export const products = [
     href: 'https://shonenpump.online',
     title: 'Shonen Pump',
     description:
-      'Crypto-powered manga reader platform revolutionizing how fans access and support manga creators while fighting industry exploitation.',
+      'Manga reader on Solana built around a token burn credit system. Each wallet gets 50 free daily reads. Burning the platform SPL token unlocks more, permanently and deflationary.',
     thumbnail: shonen,
     images: [shonen, shonen2],
     stack: [
-      'Web3',
-      'Crypto',
-      'Nextjs',
-      'Tailwindcss',
-      'Bun',
-      'Platform Design',
+      'Next.js 15',
+      'Solana',
+      'SPL Tokens',
+      'Redis',
+      'MangaDex',
+      'Jupiter',
+      'TypeScript',
     ],
     slug: 'shonen-pump',
     content: (
       <div>
         <p>
-          Shonen Pump has evolved from a meme cryptocurrency into a
-          comprehensive crypto manga reader platform built on the Solana
-          blockchain. The platform enables manga enthusiasts to read their
-          favorite series while directly supporting creators through
-          cryptocurrency, addressing long-standing issues of fair compensation
-          in the manga and anime industry.
+          Shonen Pump pulls manga from MangaDex and gates access through a
+          credit system tied to a Solana SPL token. Every wallet gets 50 free
+          credits per day, enough for 5 chapters. When that runs out, readers
+          burn tokens to unlock more. Each burn is permanent and reduces
+          circulating supply, so platform usage has a direct mechanical effect
+          on token economics rather than just being decorative Web3 branding.
         </p>
         <p>
-          The platform features an immersive reading experience with
-          anime-inspired design aesthetics, integrating Web3 technology to
-          create a sustainable ecosystem for manga creators and fans. Users can
-          access manga content, participate in the community, and contribute to
-          a movement advocating for creator rights and fair compensation. By
-          combining blockchain technology with manga distribution, Shonen Pump
-          represents a new model for content consumption that prioritizes
-          creator welfare.
+          The token burn amount is priced dynamically against the live USD rate
+          from Jupiter, so the cost per chapter stays consistent as the token
+          price moves. All Solana RPC calls are proxied server-side to keep the
+          Helius API key out of the browser. Once a chapter is unlocked it stays
+          unlocked in Redis forever, so readers actually own what they paid for
+          rather than losing access if they stop holding tokens.
         </p>
       </div>
     ),

@@ -44,7 +44,7 @@ export const AutoResponseEmail = ({
                     src={profileImageUrl}
                     width='100'
                     height='100'
-                    alt='0xDrew'
+                    alt='Akyampong'
                     style={profileImage}
                   />
                 </td>
@@ -113,7 +113,7 @@ export const AutoResponseEmail = ({
           <Text style={footer}>
             Best regards,
             <br />
-            0xDrew
+            Akyampong
           </Text>
         </Container>
       </Body>
