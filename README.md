@@ -1,4 +1,4 @@
-# 0xDrew's Portfolio
+# Akyampong's Portfolio
 
 A personal portfolio site showcasing my design and development work.
 

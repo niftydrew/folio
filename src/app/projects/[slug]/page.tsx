@@ -2,10 +2,11 @@ import { Container } from '@/components/Container';
 import { Heading } from '@/components/Heading';
 import { Highlight } from '@/components/Highlight';
 import { Paragraph } from '@/components/Paragraph';
-import { SingleProduct } from '@/components/Product';
-import { Products } from '@/components/Products';
-import { products } from '@/constants/products';
-import { Product } from '@/types/products';
+import { SingleProject } from '@/components/Project';
+import { Projects } from '@/components/Projects';
+import { projects } from '@/constants/projects';
+import { Project } from '@/types/projects';
+import { hasCaseStudy } from '../../../../lib/getCaseStudy';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,17 +19,17 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug) as Product | undefined;
-  if (product) {
+  const project = projects.find((p) => p.slug === slug) as Project | undefined;
+  if (project) {
     return {
-      title: product.title,
-      description: product.description,
+      title: project.title,
+      description: project.description,
     };
   } else {
     return {
-      title: 'Projects | 0xDrew',
+      title: 'Projects | Akyampong',
       description:
-        'Explore projects by 0xDrew, a Designer & Developer with 6+ years experience creating elegant, user-focused web solutions using React, Next.js, TypeScript and more.',
+        'Explore projects by Akyampong, a Designer & Developer with 6+ years experience creating elegant, user-focused web solutions using React, Next.js, TypeScript and more.',
     };
   }
 }
@@ -39,9 +40,9 @@ export default async function SingleProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+  const project = projects.find((p) => p.slug === slug);
 
-  if (!product) {
+  if (!project) {
     redirect('/projects');
   }
   return (
@@ -55,7 +56,7 @@ export default async function SingleProjectPage({
           Back to Projects
         </Link>
       </div>
-      <SingleProduct product={product} />
+      <SingleProject project={project} hasCaseStudy={hasCaseStudy(slug)} />
     </Container>
   );
 }

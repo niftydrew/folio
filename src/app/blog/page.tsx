@@ -2,21 +2,21 @@ import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
 import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
+import { Projects } from "@/components/Projects";
 import { getAllBlogs } from "../../../lib/getAllBlogs";
 import { Blogs } from "@/components/Blogs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | 0xDrew",
+  title: "Blog | Akyampong",
   description:
     "Thoughts and insights on web development, design, and technology by Andrew Akyampong. Designer & Developer with 6+ years experience.",
   openGraph: {
-    title: "Blog | 0xDrew",
+    title: "Blog | Akyampong",
     description: "Thoughts and insights on web development, design, and technology by Andrew Akyampong.",
   },
   twitter: {
-    title: "Blog | 0xDrew",
+    title: "Blog | Akyampong",
     description: "Thoughts and insights on web development, design, and technology by Andrew Akyampong.",
   },
 };
