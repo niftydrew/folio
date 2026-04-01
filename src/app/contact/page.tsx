@@ -3,7 +3,7 @@ import { Container } from '@/components/Container';
 import { Heading } from '@/components/Heading';
 import { Highlight } from '@/components/Highlight';
 import { Paragraph } from '@/components/Paragraph';
-import { Products } from '@/components/Products';
+import { Projects } from '@/components/Projects';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Projects() {
+export default function ContactPage() {
   return (
     <Container>
       <Heading className='mb-4'>Contact Me</Heading>
