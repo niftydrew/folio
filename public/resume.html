@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Akyampong | Full-Stack Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #0f1117;
+      --secondary:  #374151;
+      --muted:      #6b7280;
+      --faint:      #9ca3af;
+      --rule:       #e5e7eb;
+      --rule-light: #f3f4f6;
+      --rose:       #be123c;
+      --rose-light: #fff1f2;
+      --rose-border: #fecdd3;
+      --page:       #ffffff;
+      --bg:         #f5f4f2;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Page wrapper ─── */
+    .page-wrap {
+      padding: 48px 24px 96px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .resume {
+      background: var(--page);
+      width: 100%;
+      max-width: 800px;
+      padding: 56px 64px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 40px rgba(0,0,0,0.07);
+      border-radius: 4px;
+    }
+
+    /* ─── Header ─── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 28px;
+      gap: 32px;
+    }
+
+    .header-left h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 38px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .header-left .role-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--rose);
+      margin-top: 8px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 14px;
+      color: var(--secondary);
+      line-height: 2;
+      flex-shrink: 0;
+    }
+
+    .header-right a {
+      color: var(--secondary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .header-right a:hover { color: var(--rose); }
+
+    /* ─── Section ─── */
+    section { margin-top: 32px; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--faint);
+      margin-bottom: 20px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ─── Summary ─── */
+    .summary p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--secondary);
+    }
+
+    /* ─── Experience ─── */
+    .role {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+    .role:last-child { border-bottom: none; }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 2px;
+    }
+
+    .role-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .role-date {
+      font-size: 13px;
+      color: var(--faint);
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .role-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      margin-top: 1px;
+    }
+
+    .role-company {
+      font-size: 14px;
+      color: var(--rose);
+      font-weight: 500;
+    }
+
+    .role-location {
+      font-size: 13px;
+      color: var(--faint);
+    }
+
+    .role ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .role ul li {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--secondary);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .role ul li::before {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--rose);
+    }
+
+    /* ─── Projects ─── */
+    .project {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+    .project:last-child { border-bottom: none; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .project-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .project-name a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .project-name a:hover { color: var(--rose); }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: flex-end;
+      flex-shrink: 0;
+    }
+
+    /* ─── Tech pill — matches case study inline code style ─── */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid var(--rose-border);
+      background: var(--rose-light);
+      padding: 2px 8px;
+      font-size: 11.5px;
+      font-family: 'Inter', monospace;
+      font-weight: 500;
+      color: var(--rose);
+      white-space: nowrap;
+    }
+
+    .project p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--secondary);
+    }
+
+    .metric {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ─── Skills ─── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .skill-category {
+      background: var(--rule-light);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .skill-category-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 10px;
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid var(--rule);
+      background: var(--page);
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--secondary);
+      white-space: nowrap;
+    }
+
+    /* ─── Education ─── */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .edu-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .edu-date {
+      font-size: 13px;
+      color: var(--faint);
+      white-space: nowrap;
+    }
+
+    .edu-school {
+      font-size: 14px;
+      color: var(--rose);
+      font-weight: 500;
+      margin-top: 2px;
+      margin-bottom: 8px;
+    }
+
+    .edu-notes {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .edu-note {
+      font-size: 14px;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .edu-note::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--rose);
+      flex-shrink: 0;
+    }
+
+    /* ─── Download button ─── */
+    .download-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transition: background 0.15s, transform 0.1s;
+      z-index: 100;
+    }
+
+    .download-btn:hover {
+      background: #1f2333;
+      transform: translateY(-1px);
+    }
+
+    /* ─── Print ─── */
+    @media print {
+      body { background: #fff; }
+      .download-btn { display: none; }
+      .page-wrap { padding: 0; }
+      .resume {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 36px 48px;
+        max-width: 100%;
+      }
+      a { color: inherit !important; text-decoration: none !important; }
+    }
+
+    @media (max-width: 640px) {
+      .resume { padding: 32px 24px; }
+      .header { flex-direction: column; }
+      .header-right { text-align: left; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .project-header { flex-direction: column; gap: 6px; }
+      .project-stack { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrap">
+    <div class="resume">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header-left">
+          <h1>Andrew Akyampong</h1>
+          <div class="role-label">Full-Stack Engineer</div>
+        </div>
+        <div class="header-right">
+          <div><a href="mailto:hello@akyampong.com">hello@akyampong.com</a></div>
+          <div><a href="https://akyampong.com" target="_blank">akyampong.com</a></div>
+          <div><a href="https://linkedin.com/in/akyampong" target="_blank">linkedin.com/in/akyampong</a></div>
+        </div>
+      </header>
+
+      <!-- SUMMARY -->
+      <section class="summary">
+        <div class="section-title">Summary</div>
+        <p>
+          Full-stack engineer with 6+ years building products across fintech, Web3, and SaaS.
+          I work across the full stack, from Python backends and database design to React frontends
+          and shipped user interfaces, with a product design background that shapes how I approach
+          every layer. Currently co-founding Kredentic, a fraud detection platform protecting
+          businesses from Google listing impersonation scams across African markets.
+          Open to full-stack and frontend engineering roles.
+        </p>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section>
+        <div class="section-title">Experience</div>
+
+        <div class="role">
+          <div class="role-header">
+            <div class="role-title">Co-Founder &amp; Founding Engineer</div>
+            <div class="role-date">Jan 2026 &ndash; Present</div>
+          </div>
+          <div class="role-meta">
+            <span class="role-company">Kredentic</span>
+            <span class="role-location">Accra, Ghana</span>
+          </div>
+          <ul>
+            <li>Built a Python watchtower that scans Google Maps across active districts via SerpApi, detecting brand impersonation using a custom multi-signal confidence scoring engine (phone verification, RapidFuzz name matching, verification status)</li>
+            <li>Automated evidence collection with Playwright and Supabase Storage, generating timestamped screenshots for Google takedown requests</li>
+            <li>Wired real-time WhatsApp alerts via Twilio and shipped the full Next.js 15 dashboard and marketing site</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-header">
+            <div class="role-title">Senior Full-Stack Engineer</div>
+            <div class="role-date">Jan 2024 &ndash; Feb 2026</div>
+          </div>
+          <div class="role-meta">
+            <span class="role-company">Web3 Accelerators</span>
+            <span class="role-location">Dubai, UAE &middot; Remote</span>
+          </div>
+          <ul>
+            <li>Owned all technical delivery for a Web3 digital marketing agency with 260M+ influencer network reach and 74 partnered projects including StepApp, Sweatcoin, and Movement</li>
+            <li>Built and maintained client campaign sites, internal dashboards, and analytics tooling used to track KOL performance and community growth</li>
+            <li>Defined the technical stack and architecture decisions across all client and internal engineering work</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-header">
+            <div class="role-title">Senior Product Engineer</div>
+            <div class="role-date">Aug 2021 &ndash; Jul 2023</div>
+          </div>
+          <div class="role-meta">
+            <span class="role-company">Metrix Capital</span>
+            <span class="role-location">Dubai, UAE &middot; Remote</span>
+          </div>
+          <ul>
+            <li>Led end-to-end product development for Web3 startups in the portfolio, from initial product definition through to investor-ready launches</li>
+            <li>Translated complex capital markets requirements into clean, non-technical user experiences across multiple products</li>
+            <li>Covered the full design-to-code pipeline: wireframes, interaction design, and production React components</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-header">
+            <div class="role-title">Full-Stack Engineer &amp; Product Lead</div>
+            <div class="role-date">Aug 2019 &ndash; Aug 2021</div>
+          </div>
+          <div class="role-meta">
+            <span class="role-company">Bransel</span>
+            <span class="role-location">Kumasi, Ghana</span>
+          </div>
+          <ul>
+            <li>Directed the full product lifecycle for enterprise digital solutions across multiple industries, from scoping through to deployment</li>
+            <li>Led user research and feature prioritization, and managed cross-functional teams through each project stage</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-header">
+            <div class="role-title">Software Engineer</div>
+            <div class="role-date">Aug 2018 &ndash; Jul 2019</div>
+          </div>
+          <div class="role-meta">
+            <span class="role-company">Upper Manya Kro Rural Bank</span>
+            <span class="role-location">Koforidua, Ghana</span>
+          </div>
+          <ul>
+            <li>Built digital banking tools for rural communities in Ghana's Eastern Region, focusing on mobile accessibility and financial inclusion for underserved populations</li>
+            <li>Collaborated with banking and compliance teams to ensure features met regulatory requirements from the start</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section>
+        <div class="section-title">Projects</div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-name"><a href="https://kredentic.com" target="_blank">Kredentic</a></div>
+            <div class="project-stack">
+              <span class="pill">Next.js 15</span>
+              <span class="pill">Python</span>
+              <span class="pill">Supabase</span>
+              <span class="pill">Playwright</span>
+              <span class="pill">Twilio</span>
+            </div>
+          </div>
+          <p>B2B SaaS platform that monitors Google Maps 24/7 for fake business listings. Automated detection, evidence capture, and WhatsApp alerting for business owners in the Ghanaian market.</p>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-name">Polysimplr</div>
+            <div class="project-stack">
+              <span class="pill">Next.js 15</span>
+              <span class="pill">NestJS</span>
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">Redis</span>
+              <span class="pill">OpenAI</span>
+            </div>
+          </div>
+          <p>Full-stack web app built on Polymarket that makes prediction markets accessible to non-crypto users. AI chat assistant, live event browsing, and watchlists. <span class="metric">544 users, zero paid acquisition.</span></p>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-name">Shonen Pump</div>
+            <div class="project-stack">
+              <span class="pill">Next.js 15</span>
+              <span class="pill">Solana</span>
+              <span class="pill">SPL Tokens</span>
+              <span class="pill">MangaDex</span>
+              <span class="pill">Jupiter</span>
+            </div>
+          </div>
+          <p>Manga reader on Solana with a token burn credit system. Each wallet gets 50 free daily reads; burning the platform SPL token permanently unlocks more in a deflationary model.</p>
+        </div>
+
+      </section>
+
+      <!-- EDUCATION -->
+      <section>
+        <div class="section-title">Education</div>
+        <div class="edu-header">
+          <div class="edu-title">BSc Information Technology</div>
+          <div class="edu-date">2014 &ndash; 2018</div>
+        </div>
+        <div class="edu-school">University of Cape Coast, Cape Coast, Ghana</div>
+        <div class="edu-notes">
+          <span class="edu-note">First Class Honours</span>
+          <span class="edu-note">4&times; Dean&rsquo;s Award (2015&ndash;2018)</span>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section>
+        <div class="section-title">Skills</div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-category-label">Frontend</div>
+            <div class="skill-pills">
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">Backend</div>
+            <div class="skill-pills">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">NestJS</span>
+              <span class="skill-pill">Prisma</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">Databases</div>
+            <div class="skill-pills">
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">Supabase</span>
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">Redis</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">Web3</div>
+            <div class="skill-pills">
+              <span class="skill-pill">Solana</span>
+              <span class="skill-pill">SPL Tokens</span>
+              <span class="skill-pill">Solidity</span>
+              <span class="skill-pill">EIP-1155</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">Tools</div>
+            <div class="skill-pills">
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">Cloudflare</span>
+              <span class="skill-pill">Playwright</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-category-label">APIs</div>
+            <div class="skill-pills">
+              <span class="skill-pill">OpenAI</span>
+              <span class="skill-pill">SerpApi</span>
+              <span class="skill-pill">Twilio</span>
+              <span class="skill-pill">MangaDex</span>
+              <span class="skill-pill">Jupiter</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <button class="download-btn" onclick="window.print()">Download PDF</button>
+
+</body>
+</html>
