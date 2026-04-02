@@ -149,6 +149,8 @@
 
     .closing {
       margin-top: 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
 
     .closing p {
@@ -199,9 +201,12 @@
       .letter {
         box-shadow: none;
         border-radius: 0;
-        padding: 36px 48px;
+        padding: 28px 48px;
         max-width: 100%;
       }
+      .body { gap: 14px; }
+      p { line-height: 1.7; }
+      .closing p { margin-bottom: 18px; }
       a { color: inherit !important; text-decoration: none !important; }
     }
 
