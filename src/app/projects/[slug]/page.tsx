@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: 'Projects | Akyampong',
       description:
-        'Explore projects by Akyampong, a Designer & Developer with 6+ years experience creating elegant, user-focused web solutions using React, Next.js, TypeScript and more.',
+        'Explore projects by Akyampong, a Designer & Developer with 8+ years experience creating elegant, user-focused web solutions using React, Next.js, TypeScript and more.',
     };
   }
 }

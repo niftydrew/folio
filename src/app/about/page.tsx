@@ -12,16 +12,16 @@ import About from '@/components/About';
 export const metadata: Metadata = {
   title: 'About | Andrew Akyampong',
   description:
-    'Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience creating elegant, user-focused web solutions.',
+    'Learn more about Andrew Akyampong, a Designer & Developer with 8+ years experience creating elegant, user-focused web solutions.',
   openGraph: {
     title: 'About | Andrew Akyampong',
     description:
-      'Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience.',
+      'Learn more about Andrew Akyampong, a Designer & Developer with 8+ years experience.',
   },
   twitter: {
     title: 'About | Andrew Akyampong',
     description:
-      'Learn more about Andrew Akyampong, a Designer & Developer with 6+ years experience.',
+      'Learn more about Andrew Akyampong, a Designer & Developer with 8+ years experience.',
   },
 };
 

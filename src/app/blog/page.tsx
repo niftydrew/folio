@@ -8,7 +8,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog | Akyampong",
   description:
-    "Thoughts and insights on web development, design, and technology by Andrew Akyampong. Designer & Developer with 6+ years experience.",
+    "Thoughts and insights on web development, design, and technology by Andrew Akyampong. Designer & Developer with 8+ years experience.",
   openGraph: {
     title: "Blog | Akyampong",
     description: "Thoughts and insights on web development, design, and technology by Andrew Akyampong.",

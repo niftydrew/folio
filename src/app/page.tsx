@@ -28,7 +28,7 @@ export default async function Home() {
         Designer & Developer
       </Heading>
       <Paragraph className='max-w-xl mt-4'>
-        Leveraging 6+ years across both{' '}
+        Leveraging 8+ years across both{' '}
         <Highlight>design and development</Highlight>, I specialize in
         transforming <Highlight>complex challenges</Highlight> into elegant,{' '}
         <Highlight>user-focused</Highlight> web solutions, from initial concept

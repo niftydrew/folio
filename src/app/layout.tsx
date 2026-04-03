@@ -17,7 +17,7 @@ const switzer = localFont({
 export const metadata: Metadata = {
   title: 'Akyampong | Designer & Developer',
   description:
-    'Designer & Developer with 6+ years experience transforming complex challenges into elegant, user-focused web solutions.',
+    'Designer & Developer with 8+ years experience transforming complex challenges into elegant, user-focused web solutions.',
   keywords: [
     'web development',
     'design',
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     url: 'https://akyampong.com',
     title: 'Akyampong | Designer & Developer',
     description:
-      'Designer & Developer with 6+ years experience transforming complex challenges into elegant, user-focused web solutions.',
+      'Designer & Developer with 8+ years experience transforming complex challenges into elegant, user-focused web solutions.',
     siteName: 'Akyampong',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Akyampong | Designer & Developer',
     description:
-      'Designer & Developer with 6+ years experience transforming complex challenges into elegant, user-focused web solutions.',
+      'Designer & Developer with 8+ years experience transforming complex challenges into elegant, user-focused web solutions.',
     creator: '@akyampong',
   },
 };
