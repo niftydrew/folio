@@ -54,7 +54,7 @@ export const projects = [
     href: 'https://www.polysimplr.com',
     title: 'Polysimplr',
     description:
-      'Full-stack web app layered on top of Polymarket that makes prediction markets usable for people outside of crypto. AI chat assistant, live event browsing, and watchlists. 544 users, zero paid acquisition.',
+      'Full-stack web app layered on top of Polymarket that makes prediction markets usable for people outside of crypto. AI chat assistant, live event browsing, and watchlists. 1,184 users, zero paid acquisition.',
     thumbnail: polysimplr,
     images: [polysimplr, polysimplr2],
     stack: [

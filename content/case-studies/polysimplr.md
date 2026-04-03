@@ -20,7 +20,7 @@ The platform is live and in active use.
 
 | Metric | Value |
 |---|---|
-| Total registered users | **544** |
+| Total registered users | **1,184** |
 | Active users (March 2026) | **40** |
 | New signups (March 2026) | **34** |
 | Deployment | Live (Vercel + Dockerized backend) |
@@ -99,7 +99,7 @@ The token lifecycle:
 3. A custom `AuthGuard` calls Privy's `verifyAuthToken()` on every protected request
 4. The `userId` and `sessionId` are extracted from claims and attached to the request object for downstream use
 
-No session cookies, no custom token issuance, no rotation logic to maintain. The 544 registered users on the platform authenticated through this flow.
+No session cookies, no custom token issuance, no rotation logic to maintain. The 1,184 registered users on the platform authenticated through this flow.
 
 > **Why Privy over SIWE:** Requiring MetaMask would have excluded the majority of the target audience before they saw a single market. Privy's silent wallet provisioning lets Polysimplr feel like a Web2 product to anyone who wants it to, while still being fully non-custodial underneath.
 
@@ -222,7 +222,7 @@ The frontend is deployed on Vercel, which handles optimized builds, edge caching
 
 ## Key Engineering Decisions
 
-**Privy over SIWE.** This was the single highest-leverage decision. It let Polysimplr ship as a Web3 product that feels like a Web2 product, and the 544-user signup count reflects that the friction of a wallet requirement never blocked anyone.
+**Privy over SIWE.** This was the single highest-leverage decision. It let Polysimplr ship as a Web3 product that feels like a Web2 product, and the 1,184-user signup count reflects that the friction of a wallet requirement never blocked anyone.
 
 **RAG over fine-tuning.** Fine-tuning a model on Polymarket data would be expensive and quickly stale. Tavily-powered RAG is cheap, always current, and produces answers the user can verify by following the source links. For a product where trust in the information matters, that transparency is a feature.
 
@@ -245,6 +245,6 @@ The foundation supports several planned extensions:
 
 ## Summary
 
-Polysimplr is a production application with 544 registered users built on a full-stack TypeScript architecture. The engineering decisions throughout, from the caching layer to the auth design to the streaming AI pipeline, were made to serve real users rather than demonstrate technical complexity for its own sake.
+Polysimplr is a production application with 1,184 registered users built on a full-stack TypeScript architecture. The engineering decisions throughout, from the caching layer to the auth design to the streaming AI pipeline, were made to serve real users rather than demonstrate technical complexity for its own sake.
 
 The problem was that prediction markets are inaccessible. The measure of success is that people are signing up and using the product.
