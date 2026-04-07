@@ -55,7 +55,7 @@ export const Projects = ({ limit }: ProjectsProps = {}) => {
                     {project.description}
                   </Paragraph>
                 </div>
-                <div className='flex space-x-2 md:mb-1 mt-2 md:mt-0'>
+                <div className='flex flex-wrap gap-2 md:mb-1 mt-2 md:mt-0'>
                   {project.stack?.map((stack: string) => (
                     <span
                       key={stack}
