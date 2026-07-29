@@ -51,19 +51,6 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
-    company: 'Bransel | Kumasi, Ghana',
-    title: 'Full-Stack Engineer',
-    date: '2019 - 2021',
-    description: 'Bransel is a software company building digital solutions for enterprise clients across various industries in Ghana. I led product development, working with clients to understand what they needed and then shipping it.',
-    responsibilities: [
-      'Directed the full product lifecycle for enterprise software engagements, from scoping and design through to deployment and handoff',
-      'Set up structured product development workflows that brought more predictability to timelines and reduced the back-and-forth that slows most enterprise projects down',
-      'Led user research sessions with clients and their end users, using what we learned to shape what got built and in what order',
-      'Managed cross-functional teams through each project stage, keeping designers, developers, and client stakeholders aligned without the usual coordination overhead',
-      'Designed solutions that balanced what clients asked for with what was actually feasible and sustainable to maintain long term',
-    ],
-  },
-  {
     company: 'Upper Manya Kro Rural Bank | Koforidua, Ghana',
     title: 'Software Engineer',
     date: '2018 - 2019',
